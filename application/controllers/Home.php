@@ -10,4 +10,14 @@ class Home extends CI_Controller {
         $this->load->view('layout/v_wrapper',$data,FALSE);
         
     }
+
+    public function sop()
+    {
+        $data = array(
+                    'title' => 'Standar Operasional Prosedur',
+                    'isi' => 'v_sop'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);
+        
+    }
 }

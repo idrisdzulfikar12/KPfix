@@ -1,6 +1,6 @@
 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
+                        <li><a href="<?= base_url('home')?>">Home</a></li> 
 						<li>
 							<a href="#">Profil</a>
 							<ul class="dropdown">
@@ -19,7 +19,7 @@
 							<ul class="dropdown">
 								<li><a href="seruni.html">Seruni</a></li>
 								<li><a href="form_pengaduan.html">Form Pengaduan</a></li>
-								<li><a href="sop.html">Standar Operasional Prosedur</a></li>
+								<li><a href="<?= base_url('home/sop')?>">Standar Operasional Prosedur</a></li>
 							</ul>
 						</li>
                         <li>
