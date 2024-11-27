@@ -39,7 +39,7 @@
                                         <a href="buttons.html">Berita</a>
                                     </li>
                                     <li>
-                                        <a href="<?= base_url('ebook')?>">E-Book</a>
+                                        <a href="<?= base_url('book')?>">E-Book</a>
                                     </li>
                                     <li>
                                         <a href="typography.html">Galeri</a>
@@ -48,7 +48,7 @@
                                         <a href="<?= base_url('glosary')?>"> Glosary</a>
                                     </li>
                                     <li>
-                                        <a href="grid.html">Dokumen Perencanaan</a>
+                                        <a href="<?= base_url('dok')?>">Dokumen Perencanaan</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

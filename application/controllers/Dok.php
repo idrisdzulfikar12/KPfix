@@ -1,21 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Sop extends CI_Controller {
+class Dok extends CI_Controller {
 
     public function __construct() 
     {
         parent::__construct();
-        $this->load->model('m_sop');
+        $this->load->model('m_dok');
     }
 
     public function index()
     {
         $data = array(
-            'title'     => 'Standar Operasional Prosedur',
+            'title'     => 'Dokumen Perencanaan',
             'title2'    => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
-            'sop'       => $this->m_sop->lists(),
-            'isi'       => 'admin/sop/v_lists'
+            'dok'       => $this->m_dok->lists(),
+            'isi'       => 'admin/dok/v_lists'
         );
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
 
@@ -23,21 +23,21 @@ class Sop extends CI_Controller {
 
     public function add()
     {
-        $this->form_validation->set_rules('judul_sop', 'Judul SOP', 'required');
+        $this->form_validation->set_rules('judul_dok', 'Judul Dok', 'required');
         
         if ($this->form_validation->run() == TRUE) {
-            $config['upload_path']      = './file/';
+            $config['upload_path']      = './file/file_r/';
             $config['allowed_types']    = 'doc|docx|ppt|pptx|pdf|txt';
             $config['max_size']         = 2000;
             $this->upload->initialize($config);
             
-                if (!$this->upload->do_upload('file_sop'))
+                if (!$this->upload->do_upload('file_dok'))
                 {
                     $data = array(
-                        'title' => 'Add Standar Operasional Prosedur',
+                        'title' => 'Add Dokumen Perencanaan',
                         'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
                         'error_upload' => $this->upload->display_errors(),
-                        'isi' => 'admin/sop/v_add'
+                        'isi' => 'admin/dok/v_add'
                     );
                     $this->load->view('admin/layout/v_wrapper',$data,FALSE);
                 }
@@ -45,99 +45,99 @@ class Sop extends CI_Controller {
                 {
                     $upload_data                = array('uploads' => $this->upload->data());
                     $config['image_library']    = 'gd2';
-                    $config['source_image']     = './file/'.$upload_data['uploads']['file_name'];
+                    $config['source_image']     = './file/file_r/'.$upload_data['uploads']['file_name'];
                     $this->load->library('image_lib', $config);
 
                     $data = array(
-                        'judul_sop' => $this->input->post('judul_sop'),
-                        'file_sop'  => $upload_data['uploads']['file_name']
+                        'judul_dok' => $this->input->post('judul_dok'),
+                        'file_dok'  => $upload_data['uploads']['file_name']
                     );
-                    $this->m_sop->add($data);
+                    $this->m_dok->add($data);
                     $this->session->set_flashdata('pesan','Berhasil Ditambahkan');
-                    redirect('sop');
+                    redirect('dok');
                 }
         }
         $data = array(
-            'title' => 'Add Standar Operasional Prosedur',
+            'title' => 'Add Dokumen Perencanaan',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
-            'isi' => 'admin/sop/v_add'
+            'isi' => 'admin/dok/v_add'
         );
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
     }
 
-    public function edit($id_sop)
+    public function edit($id_dok)
     {
-        $this->form_validation->set_rules('judul_sop', 'Judul SOP', 'required');
+        $this->form_validation->set_rules('judul_dok', 'Judul Dok', 'required');
         
         if ($this->form_validation->run() == TRUE) {
-            $config['upload_path']      = './file/';
+            $config['upload_path']      = './file/file_r/';
             $config['allowed_types']    = 'doc|docx|ppt|pptx|pdf|txt';
             $config['max_size']         = 2000;
             $this->upload->initialize($config);
             
-                if (!$this->upload->do_upload('file_sop'))
+                if (!$this->upload->do_upload('file_dok'))
                 {
                     $data = array(
                         'title' => 'Edit Standar Operasional Prosedur',
                         'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
-                        'sop' => $this->m_sop->detail($id_sop),
+                        'dok' => $this->m_dok->detail($id_dok),
                         'error_upload' => $this->upload->display_errors(),
-                        'isi' => 'admin/sop/v_edit'
+                        'isi' => 'admin/dok/v_edit'
                     );
                     $this->load->view('admin/layout/v_wrapper',$data,FALSE);
                 }
                 else
                 {
-                    $sop=$this->m_sop->detail($id_sop);
-                    if ($sop->file_sop !="") {
-                        unlink('./file/'.$sop->file_sop);
+                    $dok=$this->m_dok->detail($id_dok);
+                    if ($dok->file_dok !="") {
+                        unlink('./file/file_r/'.$dok->file_dok);
                     }
 
                     $upload_data                = array('uploads' => $this->upload->data());
                     $config['image_library']    = 'gd2';
-                    $config['source_image']     = './file/'.$upload_data['uploads']['file_name'];
+                    $config['source_image']     = './file/file_r/'.$upload_data['uploads']['file_name'];
                     $this->load->library('image_lib', $config);
 
                     $data = array(
-                        'id_sop'    => $id_sop,
-                        'judul_sop' => $this->input->post('judul_sop'),
-                        'file_sop'  => $upload_data['uploads']['file_name']
+                        'id_dok'    => $id_dok,
+                        'judul_dok' => $this->input->post('judul_dok'),
+                        'file_dok'  => $upload_data['uploads']['file_name']
                     );
-                    $this->m_sop->edit($data);
+                    $this->m_dok->edit($data);
                     $this->session->set_flashdata('pesan','Berhasil Di Edit');
-                    redirect('sop');
+                    redirect('dok');
                 }
 
                 $data = array(
-                    'id_sop'    => $id_sop,
-                    'judul_sop' => $this->input->post('judul_sop')
+                    'id_dok'    => $id_dok,
+                    'judul_dok' => $this->input->post('judul_dok')
                 );
-                $this->m_sop->edit($data);
+                $this->m_dok->edit($data);
                 $this->session->set_flashdata('pesan','Berhasil Di Edit');
-                redirect('sop');
+                redirect('dok');
         }
         $data = array(
             'title' => 'Add Standar Operasional Prosedur',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
-            'sop' => $this->m_sop->detail($id_sop),
-            'isi' => 'admin/sop/v_edit'
+            'dok' => $this->m_dok->detail($id_dok),
+            'isi' => 'admin/dok/v_edit'
         );
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
     }
 
-    public function delete($id_sop)
+    public function delete($id_dok)
     {
-        $sop=$this->m_sop->detail($id_sop);
-        if ($sop->file_sop !="") {
-            unlink('./file/'.$sop->file_sop);
+        $dok=$this->m_dok->detail($id_dok);
+        if ($dok->file_dok !="") {
+            unlink('./file/file_r/'.$dok->file_dok);
         }
 
-        $data = array('id_sop' => $id_sop);
-        $this->m_sop->delete($data);
+        $data = array('id_dok' => $id_dok);
+        $this->m_dok->delete($data);
         $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus');
-        redirect('sop');
+        redirect('dok');
     }
 
 }
 
-/* End of file Controllername.php */
+/* End of file Controllername.php*/

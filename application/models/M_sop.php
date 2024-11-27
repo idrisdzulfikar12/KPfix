@@ -3,11 +3,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_sop extends CI_Model {
+    
     public function lists()
     {
         $this->db->select('*');
         $this->db->from('tbl_sop');
-        $this->db->order_by('id_sop', 'desc');
+        $this->db->order_by('id_sop','desc');
         return $this->db->get()->result();
     }
 
@@ -15,13 +16,13 @@ class M_sop extends CI_Model {
     {
         $this->db->select('*');
         $this->db->from('tbl_sop');
-        $this->db->where('id_sop', $id_sop);
+        $this->db->where('id_sop',$id_sop);
         return $this->db->get()->row();
     }
 
     public function add($data)
     {
-        $this->db->insert('tbl_sop', $data); 
+        $this->db->insert('tbl_sop',$data); 
     }
 
     public function edit($data)

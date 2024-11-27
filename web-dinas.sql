@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2024 pada 07.01
+-- Waktu pembuatan: 27 Nov 2024 pada 11.45
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -61,6 +61,13 @@ CREATE TABLE `tbl_book` (
   `file_book` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `tbl_book`
+--
+
+INSERT INTO `tbl_book` (`id_book`, `judul_book`, `file_book`) VALUES
+(1, 'Pembangunan Manusia Berbasis Gender', 'Kehadiran_Gmeet_Muh_Galuh_Surya_P_K_A11_2021_13785');
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +79,13 @@ CREATE TABLE `tbl_dok_rencana` (
   `judul_dok` varchar(255) DEFAULT NULL,
   `file_dok` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_dok_rencana`
+--
+
+INSERT INTO `tbl_dok_rencana` (`id_dok`, `judul_dok`, `file_dok`) VALUES
+(1, 'PKIJ', 'UAS_Literasi_Informasi_A11_2021_13785_A11_4609.pdf');
 
 -- --------------------------------------------------------
 
@@ -126,7 +140,7 @@ INSERT INTO `tbl_glosary` (`id_glosary`, `judul_glosary`, `materi_glosary`) VALU
 CREATE TABLE `tbl_sop` (
   `id_sop` int(11) NOT NULL,
   `judul_sop` varchar(255) DEFAULT NULL,
-  `file_sop` varchar(50) DEFAULT NULL
+  `file_sop` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -135,7 +149,8 @@ CREATE TABLE `tbl_sop` (
 
 INSERT INTO `tbl_sop` (`id_sop`, `judul_sop`, `file_sop`) VALUES
 (1, 'SOP Penanganan Keberatan Permohonan Informasi', 'PKPI.pdf'),
-(2, 'SOP Permohonan Informasi', 'PI.pdf');
+(2, 'SOP Permohonan Informasi', 'PI.pdf'),
+(3, 'Tugas', 'KISI-KISI_DAN_LATIHAN_SOAL_ULANGAN_PP,MTK,SENI_BUDAYA.pdf');
 
 -- --------------------------------------------------------
 
@@ -231,13 +246,13 @@ ALTER TABLE `tbl_berita`
 -- AUTO_INCREMENT untuk tabel `tbl_book`
 --
 ALTER TABLE `tbl_book`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_dok_rencana`
 --
 ALTER TABLE `tbl_dok_rencana`
-  MODIFY `id_dok` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_dok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_ebook`
@@ -255,7 +270,7 @@ ALTER TABLE `tbl_glosary`
 -- AUTO_INCREMENT untuk tabel `tbl_sop`
 --
 ALTER TABLE `tbl_sop`
-  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`

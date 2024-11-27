@@ -13,15 +13,15 @@
                 echo validation_errors('<div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>','</div>');
 
-                echo form_open_multipart('sop/add');
+                echo form_open_multipart('dok/add');
             ?>
             <div class="form-group">
-                <label>Judul SOP</label>
-                <input class="form-control" type="text" name="judul_sop" placeholder="Judul SOP" required>
+                <label>Judul Dokumen Perencanaan</label>
+                <input class="form-control" type="text" name="judul_dok" placeholder="Judul Dok" required>
             </div>
             <div class="form-group">
-                <label>File SOP</label>
-                <input type="file" class="form-control" type="text" name="file_sop" required>
+                <label>File Dokumen Perencanaan</label>
+                <input type="file" class="form-control" type="text" name="file_dok" required>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Simpan</button>

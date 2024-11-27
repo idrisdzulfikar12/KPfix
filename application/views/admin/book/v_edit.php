@@ -1,7 +1,7 @@
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            Add Data
+            Edit Data
         </div>
         <div class="panel-body">
             <?php 
@@ -13,15 +13,15 @@
                 echo validation_errors('<div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>','</div>');
 
-                echo form_open_multipart('sop/add');
+                echo form_open_multipart('book/edit/'.$book->id_book);
             ?>
             <div class="form-group">
-                <label>Judul SOP</label>
-                <input class="form-control" type="text" name="judul_sop" placeholder="Judul SOP" required>
+                <label>Judul Book</label>
+                <input class="form-control" type="text" value="<?= $book->judul_book ?>" name="judul_book" placeholder="Judul Book" required>
             </div>
             <div class="form-group">
-                <label>File SOP</label>
-                <input type="file" class="form-control" type="text" name="file_sop" required>
+                <label>File Book</label>
+                <input type="file" class="form-control" type="text" name="file_book">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Simpan</button>
