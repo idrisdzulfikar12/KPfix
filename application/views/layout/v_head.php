@@ -15,5 +15,6 @@
 <link href="<?= base_url() ?>template/front-end/js/owl-carousel/owl.carousel.css" rel="stylesheet">
 <link href="<?= base_url() ?>template/front-end/css/silder.css" rel="stylesheet" />
 <link href="<?= base_url() ?>template/front-end/css/style.css" rel="stylesheet" />
+<link href="<?= base_url() ?>template/front-end/css/video.css" rel="stylesheet" />
 
 </head>
