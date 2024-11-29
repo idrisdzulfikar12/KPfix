@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2024 pada 11.45
+-- Waktu pembuatan: 29 Nov 2024 pada 16.49
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -111,6 +111,41 @@ INSERT INTO `tbl_ebook` (`id_ebook`, `judul_ebook`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_foto`
+--
+
+CREATE TABLE `tbl_foto` (
+  `id_foto` int(11) NOT NULL,
+  `id_galeri` int(11) NOT NULL,
+  `ket_foto` text NOT NULL,
+  `foto` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_galeri`
+--
+
+CREATE TABLE `tbl_galeri` (
+  `id_galeri` int(11) NOT NULL,
+  `nama_galeri` text NOT NULL,
+  `sampul` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_galeri`
+--
+
+INSERT INTO `tbl_galeri` (`id_galeri`, `nama_galeri`, `sampul`) VALUES
+(1, 'Kampanye dan Diskusi Terbuka \"Kilau Generasi Bebas HIV dan AIDS\"', 'kampanye.jpg'),
+(2, 'Bimtek Peningkatan Kapasitas PPT Kecamatan', 'bimtek1.jpg'),
+(3, 'Bimtek Relawan Duta Revolusi Mental', 'bimtek2.jpg'),
+(4, 'Pengumuman Penghargaan APE Kota Semarang 2018', 'ape.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_glosary`
 --
 
@@ -209,6 +244,18 @@ ALTER TABLE `tbl_ebook`
   ADD PRIMARY KEY (`id_ebook`);
 
 --
+-- Indeks untuk tabel `tbl_foto`
+--
+ALTER TABLE `tbl_foto`
+  ADD PRIMARY KEY (`id_foto`);
+
+--
+-- Indeks untuk tabel `tbl_galeri`
+--
+ALTER TABLE `tbl_galeri`
+  ADD PRIMARY KEY (`id_galeri`);
+
+--
 -- Indeks untuk tabel `tbl_glosary`
 --
 ALTER TABLE `tbl_glosary`
@@ -259,6 +306,18 @@ ALTER TABLE `tbl_dok_rencana`
 --
 ALTER TABLE `tbl_ebook`
   MODIFY `id_ebook` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_foto`
+--
+ALTER TABLE `tbl_foto`
+  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_galeri`
+--
+ALTER TABLE `tbl_galeri`
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_glosary`
