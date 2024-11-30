@@ -16,5 +16,7 @@
 <link href="<?= base_url() ?>template/front-end/css/silder.css" rel="stylesheet" />
 <link href="<?= base_url() ?>template/front-end/css/style.css" rel="stylesheet" />
 <link href="<?= base_url() ?>template/front-end/css/video.css" rel="stylesheet" />
+<link href="<?= base_url() ?>template/front-end/css/about.css" rel="stylesheet"> 
+<link href="<?= base_url() ?>template/front-end/css/about_responsive.css"rel="stylesheet">
 
 </head>

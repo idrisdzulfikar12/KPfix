@@ -1,6 +1,12 @@
 <?php
 
 class Home extends CI_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('m_home');
+    }
+
     public function index()
     {
         $data = array(
@@ -131,7 +137,19 @@ class Home extends CI_Controller {
     {
         $data = array(
                     'title' => 'Galeri',
+                    'galeri' => $this->m_home->galeri(),
                     'isi' => 'v_galeri'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);   
+    }
+
+    public function detail_galeri($id_galeri)
+    {
+        $data = array(
+                    'title' => 'Detail Galeri',
+                    'galeri' => $this->m_home->detail_galeri($id_galeri),
+                    'nama_galeri' => $this->m_home->nama_galeri($id_galeri),
+                    'isi' => 'v_detail_galeri'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
     }

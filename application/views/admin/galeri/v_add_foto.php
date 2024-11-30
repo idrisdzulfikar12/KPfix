@@ -53,8 +53,10 @@
                 <img src="<?= base_url('foto/'.$value->foto) ?>" width="210px" height="210px">
                 <br>
                 <a href="<?= base_url('galeri/delete_foto/'.$value->id_galeri.'/'.$value->id_foto)?>" class="btn btn-danger btn-xs btn-block" onclick="return confirm('Apakah Foto Ini Ingin Dihapus?')"><i class="fa fa-trash"></i></a>
+                <br>
             </div>
             <?php } ?>
+           
         </div>
     </div>
 </div>

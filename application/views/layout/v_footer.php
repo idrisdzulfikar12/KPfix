@@ -86,6 +86,7 @@
 <script src="<?= base_url() ?>template/front-end/js/animate.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/custom.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/owl-carousel/owl.carousel.js"></script>
+<script src="<?= base_url() ?>template/front-end/js/about.js"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		const wrapper = document.querySelector('.slider-wrapper');

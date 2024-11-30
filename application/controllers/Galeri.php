@@ -144,7 +144,7 @@ class Galeri extends CI_Controller {
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './foto/';
             $config['allowed_types']    = 'gif|jpg|png|jpeg';
-            $config['max_size']         = 2000;
+            $config['max_size']         = 10000;
             $this->upload->initialize($config);
             
                 if (!$this->upload->do_upload('foto'))
