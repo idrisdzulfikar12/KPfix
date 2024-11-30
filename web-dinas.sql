@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Nov 2024 pada 16.49
+-- Waktu pembuatan: 30 Nov 2024 pada 16.10
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -120,6 +120,18 @@ CREATE TABLE `tbl_foto` (
   `ket_foto` text NOT NULL,
   `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_foto`
+--
+
+INSERT INTO `tbl_foto` (`id_foto`, `id_galeri`, `ket_foto`, `foto`) VALUES
+(8, 4, 'Kegiatan 1', '5c1b400a768db435979039.jpg'),
+(9, 4, 'Kegiatan 2', '5c1b403d7a9c7475232978.jpg'),
+(10, 4, 'Kegiatan 3', '5c1b4013acf62083040230.jpg'),
+(11, 4, 'Kegiatan 4', '5c1b4033f01c5311957494.jpg'),
+(12, 4, 'Kegiatan 5', '5c1b40311dd59282163671.jpg'),
+(13, 4, 'Kegiatan 6', '5c1b40456d196751989228.jpg');
 
 -- --------------------------------------------------------
 
@@ -311,7 +323,7 @@ ALTER TABLE `tbl_ebook`
 -- AUTO_INCREMENT untuk tabel `tbl_foto`
 --
 ALTER TABLE `tbl_foto`
-  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_galeri`
