@@ -31,7 +31,7 @@
                             <br>
                             <i class="fa fa-image"> <?= $value->jml_foto ?> Foto</i>
                             <br>
-                            <a href="<?= base_url('galeri/add_foto/') ?>" class="btn btn-xs btn-success"><i class="fa fa-plus"></i>Tambah Foto</a>
+                            <a href="<?= base_url('galeri/add_foto/'.$value->id_galeri) ?>" class="btn btn-xs btn-success"><i class="fa fa-plus"></i>Tambah Foto</a>
                         </td>
                         <td>
                             <a href="<?= base_url('galeri/edit/'.$value->id_galeri) ?>" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i>Edit</a>
