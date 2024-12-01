@@ -87,6 +87,10 @@
 <script src="<?= base_url() ?>template/front-end/js/custom.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/owl-carousel/owl.carousel.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/about.js"></script>
+<!-- DataTables JavaScript -->
+<script src="<?= base_url() ?>template/back-end/js/dataTables/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>template/back-end/js/dataTables/dataTables.bootstrap.min.js"></script>
+
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		const wrapper = document.querySelector('.slider-wrapper');

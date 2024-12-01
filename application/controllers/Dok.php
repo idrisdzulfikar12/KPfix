@@ -28,7 +28,7 @@ class Dok extends CI_Controller {
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './file/file_r/';
             $config['allowed_types']    = 'doc|docx|ppt|pptx|pdf|txt';
-            $config['max_size']         = 2000;
+            $config['max_size']         = 10000;
             $this->upload->initialize($config);
             
                 if (!$this->upload->do_upload('file_dok'))
@@ -72,7 +72,7 @@ class Dok extends CI_Controller {
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './file/file_r/';
             $config['allowed_types']    = 'doc|docx|ppt|pptx|pdf|txt';
-            $config['max_size']         = 2000;
+            $config['max_size']         = 10000;
             $this->upload->initialize($config);
             
                 if (!$this->upload->do_upload('file_dok'))

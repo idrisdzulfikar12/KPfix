@@ -101,6 +101,7 @@ class Home extends CI_Controller {
     {
         $data = array(
                     'title' => 'Standar Operasional Prosedur',
+                    'sop' => $this->m_home->sop(),
                     'isi' => 'v_sop'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
@@ -128,6 +129,7 @@ class Home extends CI_Controller {
     {
         $data = array(
                     'title' => 'E-Book',
+                    'book' => $this->m_home->book(),
                     'isi' => 'v_book'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
@@ -158,6 +160,7 @@ class Home extends CI_Controller {
     {
         $data = array(
                     'title' => 'Glosary',
+                    'glosary' => $this->m_home->glosary(),
                     'isi' => 'v_glosary'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
@@ -167,6 +170,7 @@ class Home extends CI_Controller {
     {
         $data = array(
                     'title' => 'Dokumen Perencanaan',
+                    'dok' => $this->m_home->dok(),
                     'isi' => 'v_dok'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   

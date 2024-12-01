@@ -3,6 +3,23 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_home extends CI_Model {
+
+    public function sop()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_sop');
+        $this->db->order_by('id_sop', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function glosary()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_glosary');
+        $this->db->order_by('id_glosary', 'desc');
+        return $this->db->get()->result();
+    }
+
     public function galeri()
     {
         $this->db->select('tbl_galeri.*,count(tbl_foto.id_galeri) as jml_foto');
@@ -28,5 +45,21 @@ class M_home extends CI_Model {
         $this->db->from('tbl_galeri');
         $this->db->where('id_galeri', $id_galeri);
         return $this->db->get()->row();
+    }
+
+    public function book()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_book');
+        $this->db->order_by('id_book', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function dok()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_dok_rencana');
+        $this->db->order_by('id_dok', 'desc');
+        return $this->db->get()->result();
     }
 }

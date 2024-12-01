@@ -11,6 +11,14 @@ class M_glosary extends CI_Model {
         return $this->db->get()->result();
     }
 
+    public function detail($id_glosary)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_glosary');
+        $this->db->where('id_glosary',$id_glosary);
+        return $this->db->get()->row();
+    }
+
     public function add($data)
     {
         $this->db->insert('tbl_glosary', $data); 

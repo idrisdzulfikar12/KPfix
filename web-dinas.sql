@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Nov 2024 pada 16.10
+-- Waktu pembuatan: 01 Des 2024 pada 06.44
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -58,7 +58,7 @@ CREATE TABLE `tbl_berita` (
 CREATE TABLE `tbl_book` (
   `id_book` int(11) NOT NULL,
   `judul_book` varchar(255) DEFAULT NULL,
-  `file_book` varchar(50) DEFAULT NULL
+  `file_book` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -66,7 +66,9 @@ CREATE TABLE `tbl_book` (
 --
 
 INSERT INTO `tbl_book` (`id_book`, `judul_book`, `file_book`) VALUES
-(1, 'Pembangunan Manusia Berbasis Gender', 'Kehadiran_Gmeet_Muh_Galuh_Surya_P_K_A11_2021_13785');
+(3, 'Pembangunan Manusia Berbasis Gender', 'Pembangunan_Manusia_Berbasis_Gender_2016.pdf'),
+(5, 'Buku Saku Mendidik Anak di Era Digital', 'Buku-Saku-Mendidik-Anak-D-Era-Digital.pdf'),
+(6, 'Mengakhiri Kekerasan Terhadap Perempuan dan Anak', 'Mengakhiri_Kekerasan_Terhadap_Perempuan_dan_Anak1.pdf');
 
 -- --------------------------------------------------------
 
@@ -77,7 +79,7 @@ INSERT INTO `tbl_book` (`id_book`, `judul_book`, `file_book`) VALUES
 CREATE TABLE `tbl_dok_rencana` (
   `id_dok` int(11) NOT NULL,
   `judul_dok` varchar(255) DEFAULT NULL,
-  `file_dok` varchar(50) DEFAULT NULL
+  `file_dok` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -85,7 +87,9 @@ CREATE TABLE `tbl_dok_rencana` (
 --
 
 INSERT INTO `tbl_dok_rencana` (`id_dok`, `judul_dok`, `file_dok`) VALUES
-(1, 'PKIJ', 'UAS_Literasi_Informasi_A11_2021_13785_A11_4609.pdf');
+(3, '2020 - LKJIP', 'LKJIP_2020.pdf'),
+(4, '2020 - LKPJ', 'LKPJ_2020.pdf'),
+(5, '2020 - Renja DP3A', 'Renja_2020.pdf');
 
 -- --------------------------------------------------------
 
@@ -176,7 +180,15 @@ INSERT INTO `tbl_glosary` (`id_glosary`, `judul_glosary`, `materi_glosary`) VALU
 (2, 'Gender ', 'Gender adalah hubungan sosial antara laki-laki dan perempuan. Gender merujuk pada hubungan antara laki-laki dan perempuan, anak laki-laki dan anak perempuan, dan bagaimana hubungan sosial ini dikonstruksikan. Peran gender bersifat dinamis dan berubah antar waktu.'),
 (3, 'Kesetaraan Gender', 'Kesetaraan Gender adalah hasil dari ketiadaan diskriminasi berdasarkan jenis kelamin atas dasar kesempatan, alokasi sumber daya atau manfaat dan akses terhadap pelayanan.'),
 (5, 'Pengarusutamaan Gender', 'Pengarusutamaan Gender adalah proses untuk menjamin perempuan dan laki-laki mempunyai akses dan kontrol terhadap sumber daya, memperoleh manfaat pembangunan dan pengambilan keputusan yang sama di semua tahapan proses pembangunan dan seluruh proyek, program dan kebijakan pemerintah.'),
-(6, 'Kesadaran Gender', 'Kesadaran Gender adalah suatu pengertian bahwa ada faktor-faktor sosial yang menentukan antara laki-laki dan perempuan atas dasar tingkah laku, yang mempengaruhi kemampuan mereka untuk mengakses dan mengontrol sumber daya. Kesadaran ini membutuhkan penerapan melalui analisa gender menjadi proyek, program dan kegiatan.');
+(6, 'Kesadaran Gender', 'Kesadaran Gender adalah suatu pengertian bahwa ada faktor-faktor sosial yang menentukan antara laki-laki dan perempuan atas dasar tingkah laku, yang mempengaruhi kemampuan mereka untuk mengakses dan mengontrol sumber daya. Kesadaran ini membutuhkan penerapan melalui analisa gender menjadi proyek, program dan kegiatan.'),
+(7, 'Analisa Gender', 'Analisa Gender adalah metodologi untuk pengumpulan dan pengolahan informasi tentang gender. Analisa gender membutuhkan data terpilah berdasarkan jenis kelamin dan suatu pengertian dari konstruksi sosial dari peran gender, bagaimana pembagian kerja dan dinilai. Analisa gender adalah proses dari analisa informasi agar supaya menjamin manfaat dan sumberdaya pembangunan secara efektif dan adil ditujukan baik bagi laki-laki maupun perempuan. Analisa Gender digunakan juga untuk mengantisipasi dan menolak akibat negatif dari pembangunan yang mungkin terjadi pada perempuan atau karena relasi gender. Analisa gender dilakukan menggunakan bermacam alat dan kerangka kerja.'),
+(8, 'Perencanaan Gender', 'Perencanaan Gender (atau Perencanaan yang sensititif Gender) adalah proses dari perencanaan program-program dan proyek-proyek pembangunan yang sensitif gender dan dimana mempertimbangkan impact dari peran gender dan kebutuhan gender dari laki-laki dan perempuan di dalam sasaran masyarakat atau sektor.'),
+(9, 'Peran Gender', 'Peran Gender adalah perilaku yang dipelajari di dalam suatu masyarakat/komunitas yang dikondisikan bahwa kegiatan, tugas-tugas atau tanggung jawab patut diterima baik oleh laki-laki maupun perempuan. Peran gender dapat berubah, dan dipengaruhi oleh umur, kelas, ras, etnik, agama dan lingkungan geografi, ekonomi dan politik. Baik perempuan maupun laki-laki memiliki peran ganda di dalam masyarakat. Perempuan kerap mempunyai peran dalam mengatur reproduksi, produksi dan kemasyarakatan. Laki-laki lebih terfokus pada produksi dan politik kemasyarakatan.'),
+(10, 'Peran Produksi', 'Peran produksi adalah kegiatan yang dilakukan baik oleh laki-laki dan perempuan agar supaya menghasilkan barang dan layanan untuk diperdagangkan, dipertukarkan atau memenuhi nafkah bagi keluarga. Sebagai contoh di pertanian, kegiatan produksi termasuk penanaman, penyiangan, peternakan.'),
+(11, 'Peran Reproduksi', 'Peran Reproduksi adalah aktivitas untuk menjamin reproduksi angkatan kerja. Hal ini termasuk pembatasan anak, penjarangan anak, perawatan terhadap anggota keluarga seperti orang tua, anak-anak dan pekerja. Tugas-tugas tersebut umumnya tidak mendapatkan upah dan kebanyakan dilakukan oleh perempuan.'),
+(12, 'Peran Masyarakat', 'Peran masyarakat adalah kegiatan-kegiatan yang dilakukan di tingkat masyarakat untuk menjamin ketersediaan dan pengelolaan sumberdaya yang terbatas seperti air, perawatan kesehatan dan pendidikan. Pekerjaan ini biasanya tidak dibayar dan kebanyakan dilakukan oleh perempuan.'),
+(13, 'Peran Politik Perempuan', 'Peran politik perempuan adalah kegiatan-kegiatan di tingkat masyarakat, mengorganisir di tingkatan formal politik, sering kali dalam kerangka kerja politik nasional. Pekerjaan ini biasanya dilakukan oleh pria, dan biasanya dibayar secara langsung (uang) atau tidak langsung (meningkatnya kekuasaan dan status).'),
+(14, 'Beban Ganda', 'Beban ganda merujuk kepada kenyataan bahwa perempuan cenderung bekerja lebih lama dan lebih sedikit harinya dibandingkan laki-laki sebagaimana biasanya mereka terlibat dalam tiga peran gender yang berbeda-reproduksi, produksi dan dan peran di masyarakat.');
 
 -- --------------------------------------------------------
 
@@ -305,13 +317,13 @@ ALTER TABLE `tbl_berita`
 -- AUTO_INCREMENT untuk tabel `tbl_book`
 --
 ALTER TABLE `tbl_book`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_dok_rencana`
 --
 ALTER TABLE `tbl_dok_rencana`
-  MODIFY `id_dok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_dok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_ebook`
@@ -335,7 +347,7 @@ ALTER TABLE `tbl_galeri`
 -- AUTO_INCREMENT untuk tabel `tbl_glosary`
 --
 ALTER TABLE `tbl_glosary`
-  MODIFY `id_glosary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_glosary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_sop`
