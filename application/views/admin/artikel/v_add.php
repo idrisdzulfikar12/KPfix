@@ -16,16 +16,16 @@
                 echo form_open_multipart('artikel/add');
             ?>
             <div class="form-group">
-                <label>Judul Artikel</label>
-                <input class="form-control" type="text" name="judul_artikel" placeholder="Judul Artikel" required>
+                <label>Judul artikel</label>
+                <input class="form-control" type="text" name="judul_artikel" placeholder="Judul artikel" required>
             </div>
             <div class="form-group">
                 <label>Gambar</label>
                 <input type="file" class="form-control" type="text" name="gambar_artikel" required>
             </div>
             <div class="form-group">
-                <label>Isi Artikel</label>
-                <textarea name="isi_berita" id="editor" required></textarea>
+                <label>Isi artikel</label>
+                <textarea name="isi_artikel" id="editor" required></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Simpan</button>

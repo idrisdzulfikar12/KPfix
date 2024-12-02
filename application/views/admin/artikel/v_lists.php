@@ -16,9 +16,9 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Judul Artikel</th>
-                        <th>Slug Artikel</th>
-                        <th>Isi Artikel</th>
+                        <th>Judul artikel</th>
+                        <th>Slug artikel</th>
+                        <th>Isi artikel</th>
                         <th>Tanggal</th>
                         <th>Gambar</th>
                         <th>Nama Publisher</th>

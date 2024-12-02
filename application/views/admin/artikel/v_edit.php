@@ -16,12 +16,12 @@
                 echo form_open_multipart('artikel/edit/'.$artikel->id_artikel);
             ?>
             <div class="form-group">
-                <label>Judul Artikel</label>
-                <input class="form-control" value="<?= $artikel->judul_artikel ?>" type="text" name="judul_artikel" placeholder="Judul Artikel" required>
+                <label>Judul artikel</label>
+                <input class="form-control" value="<?= $artikel->judul_artikel ?>" type="text" name="judul_artikel" placeholder="Judul artikel" required>
             </div>
             
             <div class="form-group">
-                <label>Isi Artikel</label>
+                <label>Isi artikel</label>
                 <textarea name="isi_artikel" id="editor" required><?= $artikel->isi_artikel ?></textarea>
             </div>
 

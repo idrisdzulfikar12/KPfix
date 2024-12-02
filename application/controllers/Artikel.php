@@ -11,7 +11,7 @@ class Artikel extends CI_Controller {
     public function index()
     {
         $data = array(
-            'title' => 'Artikel',
+            'title' => 'artikel',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
             'artikel' => $this->m_artikel->lists(),
             'isi' => 'admin/artikel/v_lists'
@@ -22,8 +22,8 @@ class Artikel extends CI_Controller {
 
     public function add()
     {
-        $this->form_validation->set_rules('judul_artikel', 'Judul Artikel', 'required');
-        $this->form_validation->set_rules('isi_artikel', 'Isi Artikel', 'required',array('required'=>'$s Harus Diisi'));
+        $this->form_validation->set_rules('judul_artikel', 'Judul artikel', 'required');
+        $this->form_validation->set_rules('isi_artikel', 'Isi artikel', 'required',array('required'=>'$s Harus Diisi'));
         
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './gambar_artikel/';
@@ -34,7 +34,7 @@ class Artikel extends CI_Controller {
                 if (!$this->upload->do_upload('gambar_artikel'))
                 {
                     $data = array(
-                        'title' => 'Add Artikel',
+                        'title' => 'Add artikel',
                         'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
                         'error_upload' => $this->upload->display_errors(),
                         'isi' => 'admin/artikel/v_add'
@@ -62,7 +62,7 @@ class Artikel extends CI_Controller {
                 }
         }
         $data = array(
-            'title' => 'Add Artikel',
+            'title' => 'Add artikel',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
             'isi' => 'admin/artikel/v_add'
         );
@@ -71,8 +71,8 @@ class Artikel extends CI_Controller {
 
     public function edit($id_artikel)
     {
-        $this->form_validation->set_rules('judul_artikel', 'Judul Artikel', 'required');
-        $this->form_validation->set_rules('isi_artikel', 'Isi Artikel', 'required',array('required'=>'$s Harus Diisi'));
+        $this->form_validation->set_rules('judul_artikel', 'Judul artikel', 'required');
+        $this->form_validation->set_rules('isi_artikel', 'Isi artikel', 'required',array('required'=>'$s Harus Diisi'));
         
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './gambar_artikel/';
@@ -83,7 +83,7 @@ class Artikel extends CI_Controller {
                 if (!$this->upload->do_upload('gambar_artikel'))
                 {
                     $data = array(
-                        'title' => 'Edit Artikel',
+                        'title' => 'Edit artikel',
                         'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
                         'error_upload' => $this->upload->display_errors(),
                         'artikel' => $this->m_artikel->detail($id_artikel),
@@ -127,7 +127,7 @@ class Artikel extends CI_Controller {
                 redirect('artikel');
         }
         $data = array(
-            'title' => 'Edit Artikel',
+            'title' => 'Edit artikel',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
             'artikel' => $this->m_artikel->detail($id_artikel),
             'isi' => 'admin/artikel/v_edit'
@@ -141,7 +141,7 @@ class Artikel extends CI_Controller {
         if ($artikel->gambar_artikel !="") {
             unlink('./gambar_artikel/'.$artikel->gambar_artikel);
         }
-        
+
         $data = array(
                     'id_artikel' => $id_artikel
                 );
