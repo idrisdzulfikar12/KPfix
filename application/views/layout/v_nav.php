@@ -4,33 +4,33 @@
 						<li>
 							<a href="#">Profil</a>
 							<ul class="dropdown">
-								<li><a href="<?= base_url() ?>template/front-end/sambutan.html">Sambutan Kepala Dinas</a></li>
-								<li><a href="struktur.html">Struktur Organisasi</a></li>
-								<li><a href="sekretariat.html">Sekretariat</a></li>
-								<li><a href="bidang_pemberdayaan_perempuan.html">Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender</a></li>
-								<li><a href="bidang_pemenuhan.html">Bidang Pemenuhan Hak Anak</a></li>
-								<li><a href="bidang_perlindungan_perempuan.html">Bidang Perlindungan Perempuan dan Anak</a></li>
-								<li><a href="bidang_pemberdayaan_manusia.html">Bidang Pemberdayaan Masyarakat dan Data Informasi </a></li>
+								<li><a href="<?= base_url('home/sambutan') ?>">Sambutan Kepala Dinas</a></li>
+								<li><a href="<?= base_url('home/struktur')?>">Struktur Organisasi</a></li>
+								<li><a href="<?= base_url('home/sekretariat')?>">Sekretariat</a></li>
+								<li><a href="<?= base_url('home/bidang_pemberdayaan_perempuan')?>">Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender</a></li>
+								<li><a href="<?= base_url('home/bidang_pemenuhan')?>">Bidang Pemenuhan Hak Anak</a></li>
+								<li><a href="<?= base_url('home/bidang_perlindungan')?>">Bidang Perlindungan Perempuan dan Anak</a></li>
+								<li><a href="<?= base_url('home/bidang_pemberdayaan_manusia')?>">Bidang Pemberdayaan Masyarakat dan Data Informasi </a></li>
 							</ul>
 						</li> 
 						<li><a href="https://dp3a.semarangkota.go.id/ppid">PPID</a></li>
                         <li>
 							<a href="#">Layanan Publik</a>
 							<ul class="dropdown">
-								<li><a href="seruni.html">Seruni</a></li>
-								<li><a href="form_pengaduan.html">Form Pengaduan</a></li>
+								<li><a href="<?= base_url('home/seruni')?>">Seruni</a></li>
+								<li><a href="<?= base_url('home/form_pengaduan')?>">Form Pengaduan</a></li>
 								<li><a href="<?= base_url('home/sop')?>">Standar Operasional Prosedur</a></li>
 							</ul>
 						</li>
                         <li>
 							<a href="#">Publikasi</a>
 							<ul class="dropdown">
-								<li><a href="berita.html">Berita</a></li>
-								<li><a href="artikel.html">Artikel</a></li>
-								<li><a href="ebook.html">Ebook</a></li>
-								<li><a href="galeri.html">Galeri</a></li>
-								<li><a href="glosary.html">Glosary</a></li>
-								<li><a href="dok_perencanaan.html">Dokumen Perencanaan</a></li>
+								<li><a href="<?= base_url('home/berita')?>">Berita</a></li>
+								<li><a href="<?= base_url('home/artikel')?>">Artikel</a></li>
+								<li><a href="<?= base_url('home/book')?>">Ebook</a></li>
+								<li><a href="<?= base_url('home/galeri')?>">Galeri</a></li>
+								<li><a href="<?= base_url('home/glosary')?>">Glosary</a></li>
+								<li><a href="<?= base_url('home/dok')?>">Dokumen Perencanaan</a></li>
 							</ul>
 						</li>
                         <li>

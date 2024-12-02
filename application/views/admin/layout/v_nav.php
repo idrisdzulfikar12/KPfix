@@ -21,7 +21,7 @@
                                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Layanan Publik<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="flot.html">Form Pengaduan</a>
+                                        <a href="<?= base_url('form_pengaduan')?>">Form Pengaduan</a>
                                     </li>
                                     <li>
                                         <a href="<?= base_url('sop')?>">Standar Operasional Prosedur</a>
@@ -33,16 +33,16 @@
                                 <a href="#"><i class="fa fa-edit fa-fw"></i> Publikasi<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="panels-wells.html">Artikel</a>
+                                        <a href="<?= base_url('artikel')?>">Artikel</a>
                                     </li>
                                     <li>
-                                        <a href="buttons.html">Berita</a>
+                                        <a href="<?= base_url('berita')?>">Berita</a>
                                     </li>
                                     <li>
                                         <a href="<?= base_url('book')?>">E-Book</a>
                                     </li>
                                     <li>
-                                        <a href="typography.html">Galeri</a>
+                                        <a href="<?= base_url('galeri')?>">Galeri</a>
                                     </li>
                                     <li>
                                         <a href="<?= base_url('glosary')?>"> Glosary</a>

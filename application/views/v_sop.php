@@ -8,31 +8,32 @@
 	</div>
 </section>
 </section>
-	<section id="content">
+<br><br>
+
+<div class="contact_info_container">
 	<div class="container">
-				<!-- Table -->
-				<div class="table-container container">
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>Judul</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td><a href="https://dp3a.semarangkota.go.id/storage/app/media/PPID/SOP%20Penanganan%20Keberatan.pdf">SOP Penanganan Keberatan Permohonan Informasi</a></td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td><a href="https://dp3a.semarangkota.go.id/storage/app/media/PPID/SOP%20Permohonan%20Informasi.pdf">SOP Permohonan Informasi</a></td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td><a href="https://dp3a.semarangkota.go.id/storage/app/media/SOP%20PELAYANAN%20PSIKOLOGI%20DP3A%20UPTD%20PPA.pdf">SOP Pelayanan Psikologi DP3A UPTD PPA</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-	</section>
+		<div class="row">
+			<div class="col-lg-12">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="text-center" width="50px">No</th>
+							<th class="text-center">Judul</th>
+							<th class="text-center" width="180px">Download</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php $no=1; foreach($sop as $key => $value) { ?>
+						<tr>
+							<td class="text-center"><?= $no++ ?></td>
+							<td><?= $value->judul_sop ?></td>
+							<td class="text-center"><a href="<?= base_url('file/'.$value->file_sop); ?>" class="btn btn-primary btn-sm rounded-button"><i class="fa fa-download"></i> Download</a></td>
+						</tr>
+						<?php } ?>
+					</tbody>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
