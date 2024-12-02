@@ -28,7 +28,7 @@ class Berita extends CI_Controller {
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './gambar_berita/';
             $config['allowed_types']    = 'gif|jpg|png|jpeg';
-            $config['max_size']         = 2000;
+            $config['max_size']         = 10000;
             $this->upload->initialize($config);
             
                 if (!$this->upload->do_upload('gambar_berita'))
@@ -50,8 +50,10 @@ class Berita extends CI_Controller {
 
                     $data = array(
                         'judul_berita' => $this->input->post('judul_berita'),
-                        'slug_berita' => $this->input->post('slug_berita'),
+                        'slug_berita' => url_title($this->input->post('judul_berita'),'dash',TRUE),
                         'isi_berita' => $this->input->post('isi_berita'),
+                        'tgl_berita' => date('Y-m-d'),
+                        'id_user'   => $this->session->userdata('id_user'),
                         'gambar_berita'  => $upload_data['uploads']['file_name']
                     );
                     $this->m_berita->add($data);
@@ -70,33 +72,76 @@ class Berita extends CI_Controller {
     public function edit($id_berita)
     {
         $this->form_validation->set_rules('judul_berita', 'Judul Berita', 'required');
-        $this->form_validation->set_rules('slug_berita', 'Slug Berita', 'required');
-        $this->form_validation->set_rules('isi_berita', 'Isi Berita', 'required');
+        $this->form_validation->set_rules('isi_berita', 'Isi Berita', 'required',array('required'=>'$s Harus Diisi'));
         
-        if ($this->form_validation->run() == FALSE) {
-            $data = array(
-                'title' => 'Edit Berita',
-                'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
-                'berita' => $this->m_berita->detail($id_berita),
-                'isi' => 'admin/berita/v_edit'
-            );
-            $this->load->view('admin/layout/v_wrapper',$data,FALSE);
-        }else
-        {
-            $data = array(
+        if ($this->form_validation->run() == TRUE) {
+            $config['upload_path']      = './gambar_berita/';
+            $config['allowed_types']    = 'gif|jpg|png|jpeg';
+            $config['max_size']         = 10000;
+            $this->upload->initialize($config);
+            
+                if (!$this->upload->do_upload('gambar_berita'))
+                {
+                    $data = array(
+                        'title' => 'Edit Berita',
+                        'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
+                        'error_upload' => $this->upload->display_errors(),
+                        'berita' => $this->m_berita->detail($id_berita),
+                        'isi' => 'admin/berita/v_edit'
+                    );
+                    $this->load->view('admin/layout/v_wrapper',$data,FALSE);
+                }
+                else
+                {
+                    $upload_data                = array('uploads' => $this->upload->data());
+                    $config['image_library']    = 'gd2';
+                    $config['source_image']     = './gambar_berita/'.$upload_data['uploads']['file_name'];
+                    $this->load->library('image_lib', $config);
+
+                    $berita=$this->m_berita->detail($id_berita);
+                    if ($berita->gambar_berita !="") {
+                        unlink('./gambar_berita/'.$berita->gambar_berita);
+                    }
+
+                    $data = array(
                         'id_berita' => $id_berita,
                         'judul_berita' => $this->input->post('judul_berita'),
-                        'slug_berita' => $this->input->post('slug_berita'),
-                        'isi_berita' => $this->input->post('isi_berita')
+                        'slug_berita' => url_title($this->input->post('judul_berita'),'dash',TRUE),
+                        'isi_berita' => $this->input->post('isi_berita'),
+                        'id_user'   => $this->session->userdata('id_user'),
+                        'gambar_berita'  => $upload_data['uploads']['file_name']
                     );
-            $this->m_berita->edit($data);
-            $this->session->set_flashdata('pesan', 'Data Berhasil Diedit');
-            redirect('berita');
+                    $this->m_berita->edit($data);
+                    $this->session->set_flashdata('pesan','Berhasil Diedit');
+                    redirect('berita');
+                }
+                $data = array(
+                    'id_berita' => $id_berita,
+                    'judul_berita' => $this->input->post('judul_berita'),
+                    'slug_berita' => url_title($this->input->post('judul_berita'),'dash',TRUE),
+                    'isi_berita' => $this->input->post('isi_berita'),
+                    'id_user'   => $this->session->userdata('id_user')
+                );
+                $this->m_berita->edit($data);
+                $this->session->set_flashdata('pesan','Berhasil Diedit');
+                redirect('berita');
         }
+        $data = array(
+            'title' => 'Edit Berita',
+            'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
+            'berita' => $this->m_berita->detail($id_berita),
+            'isi' => 'admin/berita/v_edit'
+        );
+        $this->load->view('admin/layout/v_wrapper',$data,FALSE);
     }
 
     public function delete($id_berita)
     {
+        $berita=$this->m_berita->detail($id_berita);
+        if ($berita->gambar_berita !="") {
+            unlink('./gambar_berita/'.$berita->gambar_berita);
+        }
+
         $data = array(
                     'id_berita' => $id_berita
                 );

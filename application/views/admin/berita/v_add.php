@@ -20,10 +20,6 @@
                 <input class="form-control" type="text" name="judul_berita" placeholder="Judul Berita" required>
             </div>
             <div class="form-group">
-                <label>Slug Berita</label>
-                <input class="form-control" type="text" name="slug_berita" placeholder="Slug Berita" required>
-            </div>
-            <div class="form-group">
                 <label>Gambar</label>
                 <input type="file" class="form-control" type="text" name="gambar_berita" required>
             </div>

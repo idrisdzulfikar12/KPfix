@@ -19,19 +19,16 @@
                 <label>Judul Berita</label>
                 <input class="form-control" value="<?= $berita->judul_berita ?>" type="text" name="judul_berita" placeholder="Judul Berita" required>
             </div>
-            <div class="form-group">
-                <label>Slug Berita</label>
-                <input class="form-control" value="<?= $berita->slug_berita ?>" type="text" name="slug_berita" placeholder="Slug Berita" required>
-            </div>
-            <div class="form-group">
-                <label>Gambar</label>
-                <input type="file" class="form-control" type="text" name="gambar_berita">
-            </div>
+            
             <div class="form-group">
                 <label>Isi Berita</label>
                 <textarea name="isi_berita" id="editor" required><?= $berita->isi_berita ?></textarea>
             </div>
 
+            <div class="form-group">
+                <label>Ganti Gambar</label>
+                <input type="file" class="form-control" type="text" name="gambar_berita">
+            </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <button type="reset" class="btn btn-success">Reset</button>

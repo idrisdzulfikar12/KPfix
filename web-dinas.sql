@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Des 2024 pada 09.18
+-- Waktu pembuatan: 02 Des 2024 pada 11.02
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -140,9 +140,11 @@ INSERT INTO `pelapor` (`id`, `nama`, `sebagai`, `alamat`, `no_hp`, `email`) VALU
 CREATE TABLE `tbl_artikel` (
   `id_artikel` int(11) NOT NULL,
   `judul_artikel` varchar(255) DEFAULT NULL,
+  `slug_artikel` varchar(255) DEFAULT NULL,
   `isi_artikel` text DEFAULT NULL,
   `gambar_artikel` varchar(30) DEFAULT NULL,
-  `tgl_artikel` timestamp NOT NULL DEFAULT current_timestamp()
+  `tgl_artikel` timestamp NOT NULL DEFAULT current_timestamp(),
+  `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -166,7 +168,7 @@ CREATE TABLE `tbl_berita` (
 --
 
 INSERT INTO `tbl_berita` (`id_berita`, `judul_berita`, `slug_berita`, `isi_berita`, `gambar_berita`, `tgl_berita`, `id_user`) VALUES
-(1, 'Berita Trial', 'Slug', 'Isi berita', 'gambar', '2024-12-02 05:30:14', 1);
+(1, 'Berita Trial Error', 'berita-trial-error', 'Isi berita asli', '123.jpg', '2024-12-02 05:30:14', 1);
 
 -- --------------------------------------------------------
 
@@ -480,7 +482,7 @@ ALTER TABLE `tbl_artikel`
 -- AUTO_INCREMENT untuk tabel `tbl_berita`
 --
 ALTER TABLE `tbl_berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_book`
