@@ -5,7 +5,7 @@
 				<div class="widget">
 					<h5 class="widgetheading">Our Contact</h5>
 					<address>
-					<strong>Abovecompany Inc</strong><br>
+					<strong>DP3A</strong><br>
 					JC Main Road, Near Silnile tower<br>
 					 Pin-21542 NewYork US.</address>
 					<p>
