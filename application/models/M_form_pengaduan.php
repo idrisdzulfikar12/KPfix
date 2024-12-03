@@ -31,17 +31,36 @@ class M_form_pengaduan extends CI_Model {
         return $this->db->get()->row();
     }
 
-    public function get_pelapor_detail($id)
-    {
-    // Ambil detail pelapor
+//     public function get_pelapor_detail($id)
+//     {
+//     // Ambil detail pelapor
+//     $pelapor = $this->db->get_where('pelapor', ['pelapor_id' => $id])->row();
+
+//     // Ambil data terkait berdasarkan pelapor_id
+//     $kasus = $this->db->get_where('kasus', ['pelapor_id' => $id])->result();
+//     $korban = $this->db->get_where('korban', ['pelapor_id' => $id])->result();
+//     $pelaku = $this->db->get_where('pelaku', ['pelapor_id' => $id])->result();
+
+//     // Gabungkan data
+//     return [
+//         'pelapor' => $pelapor,
+//         'kasus' => $kasus,
+//         'korban' => $korban,
+//         'pelaku' => $pelaku
+//     ];
+// }
+
+public function get_pelapor_detail($id)
+{
+    // Ambil detail pelapor berdasarkan pelapor_id
     $pelapor = $this->db->get_where('pelapor', ['pelapor_id' => $id])->row();
 
-    // Ambil data terkait berdasarkan pelapor_id
+    // Ambil data kasus, korban, dan pelaku yang terkait dengan pelapor_id
     $kasus = $this->db->get_where('kasus', ['pelapor_id' => $id])->result();
     $korban = $this->db->get_where('korban', ['pelapor_id' => $id])->result();
     $pelaku = $this->db->get_where('pelaku', ['pelapor_id' => $id])->result();
 
-    // Gabungkan data
+    // Gabungkan semua data menjadi array
     return [
         'pelapor' => $pelapor,
         'kasus' => $kasus,
