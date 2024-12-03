@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+<script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -20,9 +23,9 @@
                 <input class="form-control" value="<?= $berita->judul_berita ?>" type="text" name="judul_berita" placeholder="Judul Berita" required>
             </div>
             
-            <div class="form-group">
-                <label>Isi Berita</label>
-                <textarea name="isi_berita" id="editor" required><?= $berita->isi_berita ?></textarea>
+            <div class="form-group" >
+                    <input type="hidden" id="isi_berita" name="isi_berita" value="<?= $berita->isi_berita ?>">
+                    <trix-editor input="isi_berita"></trix-editor>
             </div>
 
             <div class="form-group">

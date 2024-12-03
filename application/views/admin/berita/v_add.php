@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+<script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -23,9 +26,9 @@
                 <label>Gambar</label>
                 <input type="file" class="form-control" type="text" name="gambar_berita" required>
             </div>
-            <div class="form-group">
-                <label>Isi Berita</label>
-                <textarea name="isi_berita" id="editor" required></textarea>
+            <div class="form-group" >
+                    <input type="hidden" id="isi_berita" name="isi_berita">
+                    <trix-editor input="isi_berita"></trix-editor>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Simpan</button>

@@ -6,8 +6,8 @@
 					<h5 class="widgetheading">Our Contact</h5>
 					<address>
 					<strong>DP3A</strong><br>
-					JC Main Road, Near Silnile tower<br>
-					 Pin-21542 NewYork US.</address>
+					Jl. Prof. Soedarto No.116, Sumurboto, Kec. Banyumanik, Kota Semarang<br>
+					Jawa Tengah 50269</address>
 					<p>
 						<i class="icon-phone"></i> (024) 76402252  <br>
 						<i class="icon-envelope-alt"></i> dinasp3a.kotasemarang@gmail.com

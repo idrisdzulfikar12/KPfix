@@ -32,4 +32,7 @@
         <script src="<?= base_url() ?>ckeditor/samples/js/sample.js"></script>
         <link rel="stylesheet" href="<?= base_url() ?>ckeditor/samples/css/samples.css">
         <link rel="stylesheet" href="<?= base_url() ?>ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+        <!-- <script src="/ckeditor/ckeditor.js"></script> -->
+        <!-- <script src="//cdn.ckeditor.com/4.25.0-lts/standard/ckeditor.js"></script> -->
+
     </head>
