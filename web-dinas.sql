@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Des 2024 pada 11.02
+-- Waktu pembuatan: 04 Des 2024 pada 03.08
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -35,19 +35,24 @@ CREATE TABLE `kasus` (
   `kecamatan` varchar(255) NOT NULL,
   `tanggal_kejadian` date NOT NULL,
   `status_laporan` enum('Kepolisian','Pengadilan','LSM') NOT NULL,
-  `kronologi_singkat` text NOT NULL
+  `kronologi_singkat` text NOT NULL,
+  `pelapor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `kasus`
 --
 
-INSERT INTO `kasus` (`id`, `jenis_kasus`, `bentuk_kekerasan`, `tempat_kejadian`, `kecamatan`, `tanggal_kejadian`, `status_laporan`, `kronologi_singkat`) VALUES
-(1, 'kekerasan terhadap perempuan', 'fisik', 'rumah tangga', 'Semarang Timur', '2024-12-09', 'Kepolisian', 'xvxcvxcvc'),
-(2, 'traffiking', 'seksual', 'sekolah', 'Semarang Tengah', '2024-12-02', 'LSM', 'saat dimana saja'),
-(3, 'kekerasan terhadap perempuan', 'seksual', 'sekolah', 'Semarang Timur', '2024-11-27', '', 'Jadi abzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'),
-(4, 'kekerasan terhadap anak', 'fisik', 'rumah tangga', 'Mijen', '2024-12-28', 'Kepolisian', 'kjaksjkaakjs'),
-(5, 'kekerasan terhadap anak', 'fisik', 'rumah tangga', 'Mijen', '2024-12-07', 'Kepolisian', 'kjaksjkaakjs');
+INSERT INTO `kasus` (`id`, `jenis_kasus`, `bentuk_kekerasan`, `tempat_kejadian`, `kecamatan`, `tanggal_kejadian`, `status_laporan`, `kronologi_singkat`, `pelapor_id`) VALUES
+(1, 'kekerasan terhadap perempuan', 'fisik', 'rumah tangga', 'Semarang Timur', '2024-12-09', 'Kepolisian', 'xvxcvxcvc', 1),
+(2, 'traffiking', 'seksual', 'sekolah', 'Semarang Tengah', '2024-12-02', 'LSM', 'saat dimana saja', 2),
+(3, 'kekerasan terhadap perempuan', 'seksual', 'sekolah', 'Semarang Timur', '2024-11-27', '', 'Jadi abzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', 3),
+(4, 'kekerasan terhadap anak', 'fisik', 'rumah tangga', 'Mijen', '2024-12-28', 'Kepolisian', 'kjaksjkaakjs', 4),
+(5, 'kekerasan terhadap anak', 'fisik', 'rumah tangga', 'Mijen', '2024-12-07', 'Kepolisian', 'kjaksjkaakjs', 5),
+(6, 'kekerasan terhadap perempuan', 'seksual', 'sekolah', 'Semarang Timur', '2024-12-11', 'Kepolisian', 'Jadi saat itu si a lalu si a', 6),
+(7, 'kekerasan terhadap perempuan', 'psikis', 'rumah tangga', 'Semarang Timur', '2024-12-02', '', 'Jadi si a melakukan ini ke si b', 7),
+(8, 'kekerasan terhadap perempuan', 'psikis', 'rumah tangga', 'Semarang Timur', '2024-12-02', '', 'Jadi si a melakukan ini ke si b', 8),
+(9, 'kekerasan terhadap anak', 'fisik', 'rumah tangga', 'Mijen', '2024-12-02', 'Kepolisian', 'Jadi kronologinya', 9);
 
 -- --------------------------------------------------------
 
@@ -76,7 +81,10 @@ INSERT INTO `korban` (`id`, `pelapor_id`, `nama_korban`, `jenis_kelamin`, `disab
 (2, 2, 'Sasa', 'perempuan', 'tidak', 13, 'SD', 'tidak bekerja', 'belum kawin'),
 (3, 3, 'Ani', 'perempuan', 'iya', 12, 'SMP', 'tidak bekerja', 'belum kawin'),
 (4, 4, 'Andi', 'laki laki', 'iya', 23, 'SMA', 'bekerja', 'kawin'),
-(5, 5, 'Andian', 'laki laki', 'iya', 23, 'SMA', 'bekerja', 'kawin');
+(5, 5, 'Andian', 'laki laki', 'iya', 23, 'SMA', 'bekerja', 'kawin'),
+(6, 6, 'Andin', 'perempuan', 'tidak', 24, 'SMA', 'tidak bekerja', 'cerai'),
+(8, 8, 'Odi', 'laki laki', 'tidak', 21, 'SMA', 'tidak bekerja', 'belum kawin'),
+(9, 9, 'Alda', 'laki laki', 'tidak', 23, 'SMA', 'tidak bekerja', 'belum kawin');
 
 -- --------------------------------------------------------
 
@@ -103,7 +111,9 @@ CREATE TABLE `pelaku` (
 INSERT INTO `pelaku` (`id`, `pelapor_id`, `nama_pelaku`, `jenis_kelamin`, `usia`, `pendidikan`, `pekerjaan`, `hubungan_dengan_korban`, `kewarganegaraan`) VALUES
 (1, 1, 'adczxc', 'Perempuan', 13, 'SD', 'tidak bekerja', 'Orang tua', 'WNI'),
 (2, 2, 'Ilham', 'Laki - laki', 17, 'SMA', 'tidak bekerja', 'Pacar', 'WNI'),
-(5, 5, 'Sabrian', 'Perempuan', 40, 'SMA', 'tidak bekerja', 'Teman', 'WNI');
+(5, 5, 'Sabrian', 'Perempuan', 40, 'SMA', 'tidak bekerja', 'Teman', 'WNI'),
+(6, 6, 'Adonis', 'Laki - laki', 20, 'SMA', 'tidak bekerja', 'Pacar', 'WNI'),
+(7, 9, 'Aldi', 'Laki - laki', 24, 'SMA', 'bekerja', 'Pacar', 'WNI');
 
 -- --------------------------------------------------------
 
@@ -112,7 +122,7 @@ INSERT INTO `pelaku` (`id`, `pelapor_id`, `nama_pelaku`, `jenis_kelamin`, `usia`
 --
 
 CREATE TABLE `pelapor` (
-  `id` int(11) NOT NULL,
+  `pelapor_id` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `sebagai` enum('korban','orang tua','orang lain','saudara') NOT NULL,
   `alamat` text NOT NULL,
@@ -124,12 +134,16 @@ CREATE TABLE `pelapor` (
 -- Dumping data untuk tabel `pelapor`
 --
 
-INSERT INTO `pelapor` (`id`, `nama`, `sebagai`, `alamat`, `no_hp`, `email`) VALUES
+INSERT INTO `pelapor` (`pelapor_id`, `nama`, `sebagai`, `alamat`, `no_hp`, `email`) VALUES
 (1, 'ilham', 'orang tua', 'fgdgdf', '56564', 'anggitprayogo@gmail.com'),
 (2, 'Galuh', 'orang lain', 'punden selatan', '081325787980', 'skizorito@gmail.com'),
 (3, 'Muh Alde', 'orang tua', 'Jl Kawi', '0877291021', 'rizalroe@gmail.com'),
 (4, 'Muh Aldea', 'orang tua', 'Jl akmaksma', '094304839437', 'galuh@gmail.com'),
-(5, 'Muh Aldeam', 'orang tua', 'Jl akmaksma', '094304839434', 'galuh12@gmail.com');
+(5, 'Muh Aldeam', 'orang tua', 'Jl akmaksma', '094304839434', 'galuh12@gmail.com'),
+(6, 'Andika', 'saudara', 'Jl jembatan', '087729102132', 'uglh@gmail.com'),
+(7, 'Jeje', 'orang tua', 'Jl Gunung Pati', '08321431212', 'jeje@gmail.com'),
+(8, 'Jeje', 'orang tua', 'Jl Gunung Pati', '08321431212', 'jeje@gmail.com'),
+(9, 'Yudhis', 'orang tua', 'Jl Kalibatu', '086765665', 'dhis@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -146,6 +160,14 @@ CREATE TABLE `tbl_artikel` (
   `tgl_artikel` timestamp NOT NULL DEFAULT current_timestamp(),
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_artikel`
+--
+
+INSERT INTO `tbl_artikel` (`id_artikel`, `judul_artikel`, `slug_artikel`, `isi_artikel`, `gambar_artikel`, `tgl_artikel`, `id_user`) VALUES
+(2, 'UPAYA MENGATASI BULLYING DALAM LINGKUP SEKOLAH', 'upaya-mengatasi-bullying-dalam-lingkup-sekolah', 'Upaya mengatasi ', 'artikel1.png', '2024-12-01 21:04:00', 1),
+(3, 'PERAN AYAH DALAM PENGASUHAN ANAK', 'peran-ayah-dalam-pengasuhan-anak', '<div>Ayah adalah alakslaklska</div>', 'artikel2.png', '2024-12-02 17:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -168,7 +190,9 @@ CREATE TABLE `tbl_berita` (
 --
 
 INSERT INTO `tbl_berita` (`id_berita`, `judul_berita`, `slug_berita`, `isi_berita`, `gambar_berita`, `tgl_berita`, `id_user`) VALUES
-(1, 'Berita Trial Error', 'berita-trial-error', 'Isi berita asli', '123.jpg', '2024-12-02 05:30:14', 1);
+(1, 'Berita Trial Error', 'berita-trial-error', 'Isi berita asli', '123.jpg', '2024-12-02 05:30:14', 1),
+(9, 'Berita Trial Error', 'berita-trial-error', 'assassa', 'artikel1.png', '2024-12-02 17:00:00', 1),
+(10, 'Berita 4 ', 'berita-4', '<div>Hallo</div>', 'artikel11.png', '2024-12-02 17:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -328,9 +352,9 @@ CREATE TABLE `tbl_sop` (
 --
 
 INSERT INTO `tbl_sop` (`id_sop`, `judul_sop`, `file_sop`) VALUES
-(1, 'SOP Penanganan Keberatan Permohonan Informasi', 'PKPI.pdf'),
-(2, 'SOP Permohonan Informasi', 'PI.pdf'),
-(3, 'Tugas', 'KISI-KISI_DAN_LATIHAN_SOAL_ULANGAN_PP,MTK,SENI_BUDAYA.pdf');
+(5, 'SOP Pelayanan Psikologi DP3A UPTD PPA', 'SOP_PELAYANAN_PSIKOLOGI_DP3A_UPTD_PPA.pdf'),
+(6, 'SOP Permohonan Informasi', 'SOP_Permohonan_Informasi.pdf'),
+(7, 'SOP Penanganan Keberatan Permohonan Informasi', 'SOP_Penanganan_Keberatan.pdf');
 
 -- --------------------------------------------------------
 
@@ -382,7 +406,7 @@ ALTER TABLE `pelaku`
 -- Indeks untuk tabel `pelapor`
 --
 ALTER TABLE `pelapor`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`pelapor_id`);
 
 --
 -- Indeks untuk tabel `tbl_artikel`
@@ -452,37 +476,37 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT untuk tabel `kasus`
 --
 ALTER TABLE `kasus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `korban`
 --
 ALTER TABLE `korban`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `pelaku`
 --
 ALTER TABLE `pelaku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `pelapor`
 --
 ALTER TABLE `pelapor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pelapor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_artikel`
 --
 ALTER TABLE `tbl_artikel`
-  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_berita`
 --
 ALTER TABLE `tbl_berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_book`
@@ -524,7 +548,7 @@ ALTER TABLE `tbl_glosary`
 -- AUTO_INCREMENT untuk tabel `tbl_sop`
 --
 ALTER TABLE `tbl_sop`
-  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`
