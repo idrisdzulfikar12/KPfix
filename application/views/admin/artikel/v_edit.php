@@ -22,11 +22,6 @@
                 <label>Judul artikel</label>
                 <input class="form-control" value="<?= $artikel->judul_artikel ?>" type="text" name="judul_artikel" placeholder="Judul artikel" required>
             </div>
-            
-            <div class="form-group">
-                <label>Isi artikel</label>
-                <textarea name="isi_artikel" id="editor" required><?= $artikel->isi_artikel ?></textarea>
-            </div>
 
             <div class="form-group" >
                     <input type="hidden" id="isi_artikel" name="isi_artikel" value="<?= $artikel->isi_artikel ?>">

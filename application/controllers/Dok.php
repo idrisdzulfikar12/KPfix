@@ -78,7 +78,7 @@ class Dok extends CI_Controller {
                 if (!$this->upload->do_upload('file_dok'))
                 {
                     $data = array(
-                        'title' => 'Edit Standar Operasional Prosedur',
+                        'title' => 'Edit Dokumen Perencanaan',
                         'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
                         'dok' => $this->m_dok->detail($id_dok),
                         'error_upload' => $this->upload->display_errors(),
@@ -117,7 +117,7 @@ class Dok extends CI_Controller {
                 redirect('dok');
         }
         $data = array(
-            'title' => 'Add Standar Operasional Prosedur',
+            'title' => 'Edit Dokumen Perencanaan',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
             'dok' => $this->m_dok->detail($id_dok),
             'isi' => 'admin/dok/v_edit'

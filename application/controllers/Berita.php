@@ -108,6 +108,7 @@ class Berita extends CI_Controller {
                         'judul_berita' => $this->input->post('judul_berita'),
                         'slug_berita' => url_title($this->input->post('judul_berita'),'dash',TRUE),
                         'isi_berita' => $this->input->post('isi_berita'),
+                        'tgl_berita' => date('Y-m-d'),
                         'id_user'   => $this->session->userdata('id_user'),
                         'gambar_berita'  => $upload_data['uploads']['file_name']
                     );
@@ -120,6 +121,7 @@ class Berita extends CI_Controller {
                     'judul_berita' => $this->input->post('judul_berita'),
                     'slug_berita' => url_title($this->input->post('judul_berita'),'dash',TRUE),
                     'isi_berita' => $this->input->post('isi_berita'),
+                    'tgl_berita' => date('Y-m-d'),
                     'id_user'   => $this->session->userdata('id_user')
                 );
                 $this->m_berita->edit($data);

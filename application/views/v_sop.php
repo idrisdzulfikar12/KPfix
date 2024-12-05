@@ -27,7 +27,7 @@
 						<tr>
 							<td class="text-center"><?= $no++ ?></td>
 							<td><?= $value->judul_sop ?></td>
-							<td class="text-center"><a href="<?= base_url('file/'.$value->file_sop); ?>" class="btn btn-primary btn-sm rounded-button"><i class="fa fa-download"></i> Download</a></td>
+							<td class="text-center"><a href="<?= base_url('file/file_s/'.$value->file_sop); ?>" class="btn btn-primary btn-sm rounded-button"><i class="fa fa-download"></i> Download</a></td>
 						</tr>
 						<?php } ?>
 					</tbody>

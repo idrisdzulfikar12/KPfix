@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="widget">
-					<h5 class="widgetheading">Our Contact</h5>
+					<h5 class="widgetheading">Our Contact</h5><br>
 					<address>
 					<strong>DP3A</strong><br>
 					Jl. Prof. Soedarto No.116, Sumurboto, Kec. Banyumanik, Kota Semarang<br>
@@ -19,10 +19,6 @@
 					<h5 class="widgetheading">Quick Links</h5>
 					<ul class="link-list">
 						<li><a href="#">Latest Events</a></li>
-						<li><a href="#">Terms and conditions</a></li>
-						<li><a href="#">Privacy policy</a></li>
-						<li><a href="#">Career</a></li>
-						<li><a href="#">Contact us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -30,9 +26,7 @@
 				<div class="widget">
 					<h5 class="widgetheading">Latest posts</h5>
 					<ul class="link-list">
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-						<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-						<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
+					
 					</ul>
 				</div>
 			</div>
@@ -40,9 +34,7 @@
 				<div class="widget">
 					<h5 class="widgetheading">Recent News</h5>
 					<ul class="link-list">
-					<li><a href="https://dp3a.semarangkota.go.id/blog/post/deklarasi-satgas-ppks-undip-bentuk-komitmen-menciptakan-ruang-aman-dari-kekerasan-seksual" target="_blank">Deklarasi Satgas PPKS UNDIP Bentuk Komitmen Menciptakan Ruang Aman dari Kekerasan Seksual</a></li>
-					<li><a href="https://dp3a.semarangkota.go.id/blog/post/pudakpayung-banyumanik-masuk-4-besar-dalam-lomba-kelurahan-tingkat-provinsi-jawa-tengah-tahun-2024" target="_blank">Pudakpayung Banyumanik masuk 4 besar dalam Lomba Kelurahan Tingkat Provinsi Jawa Tengah Tahun 2024</a></li>
-					<li><a href="https://dp3a.semarangkota.go.id/blog/post/jauhi-narkoba-selamatkan-generasi-penerus-bangsa" target="_blank">Jauhi Narkoba Selamatkan Generasi Penerus Bangsa</a></li>
+						
 					</ul>
 				</div>
 			</div>

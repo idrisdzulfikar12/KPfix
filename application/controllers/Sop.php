@@ -26,7 +26,7 @@ class Sop extends CI_Controller {
         $this->form_validation->set_rules('judul_sop', 'Judul SOP', 'required');
         
         if ($this->form_validation->run() == TRUE) {
-            $config['upload_path']      = './file/';
+            $config['upload_path']      = './file/file_s/';
             $config['allowed_types']    = 'doc|docx|ppt|pptx|pdf|txt';
             $config['max_size']         = 10000;
             $this->upload->initialize($config);
@@ -45,7 +45,7 @@ class Sop extends CI_Controller {
                 {
                     $upload_data                = array('uploads' => $this->upload->data());
                     $config['image_library']    = 'gd2';
-                    $config['source_image']     = './file/'.$upload_data['uploads']['file_name'];
+                    $config['source_image']     = './file/file_s/'.$upload_data['uploads']['file_name'];
                     $this->load->library('image_lib', $config);
 
                     $data = array(
@@ -67,10 +67,10 @@ class Sop extends CI_Controller {
 
     public function edit($id_sop)
     {
-        $this->form_validation->set_rules('judul_sop', 'Judul SOP', 'required');
+        $this->form_validation->set_rules('judul_sop', 'Judul sop', 'required');
         
         if ($this->form_validation->run() == TRUE) {
-            $config['upload_path']      = './file/';
+            $config['upload_path']      = './file/file_s/';
             $config['allowed_types']    = 'doc|docx|ppt|pptx|pdf|txt';
             $config['max_size']         = 10000;
             $this->upload->initialize($config);
@@ -90,12 +90,12 @@ class Sop extends CI_Controller {
                 {
                     $sop=$this->m_sop->detail($id_sop);
                     if ($sop->file_sop !="") {
-                        unlink('./file/'.$sop->file_sop);
+                        unlink('./file/file_s/'.$sop->file_sop);
                     }
 
                     $upload_data                = array('uploads' => $this->upload->data());
                     $config['image_library']    = 'gd2';
-                    $config['source_image']     = './file/'.$upload_data['uploads']['file_name'];
+                    $config['source_image']     = './file/file_s/'.$upload_data['uploads']['file_name'];
                     $this->load->library('image_lib', $config);
 
                     $data = array(
@@ -129,7 +129,7 @@ class Sop extends CI_Controller {
     {
         $sop=$this->m_sop->detail($id_sop);
         if ($sop->file_sop !="") {
-            unlink('./file/'.$sop->file_sop);
+            unlink('./file/file_s/'.$sop->file_sop);
         }
 
         $data = array('id_sop' => $id_sop);

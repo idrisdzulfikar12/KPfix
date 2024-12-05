@@ -62,4 +62,80 @@ class M_home extends CI_Model {
         $this->db->order_by('id_dok', 'desc');
         return $this->db->get()->result();
     }
+
+    public function berita($limit,$start)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'desc');
+        $this->db->limit($limit,$start);
+        return $this->db->get()->result();
+    }
+
+    public function total_berita()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function detail_berita($slug_berita)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->where('slug_berita', $slug_berita);
+        return $this->db->get()->row();
+    }
+
+    public function latest_berita()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'desc');
+        $this->db->limit(10);
+        return $this->db->get()->result();
+    }
+
+    public function artikel($limit,$start)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_artikel');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_artikel.id_user', 'left');
+        $this->db->order_by('id_artikel', 'desc');
+        $this->db->limit($limit,$start);
+        return $this->db->get()->result();
+    }
+
+    public function total_artikel()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_artikel');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_artikel.id_user', 'left');
+        $this->db->order_by('id_artikel', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function detail_artikel($slug_artikel)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_artikel');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_artikel.id_user', 'left');
+        $this->db->where('slug_artikel', $slug_artikel);
+        return $this->db->get()->row();
+    }
+
+    public function latest_artikel()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_artikel');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_artikel.id_user', 'left');
+        $this->db->order_by('id_artikel', 'desc');
+        $this->db->limit(10);
+        return $this->db->get()->result();
+    }
 }

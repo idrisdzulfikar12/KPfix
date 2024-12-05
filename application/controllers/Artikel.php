@@ -52,7 +52,7 @@ class Artikel extends CI_Controller {
                         'judul_artikel' => $this->input->post('judul_artikel'),
                         'slug_artikel' => url_title($this->input->post('judul_artikel'),'dash',TRUE),
                         'isi_artikel' => $this->input->post('isi_artikel'),
-                        'tgl_artikel' => date('Y-m-d'),
+                        'tgl_artikel' => date('Y-m-d H:i:s'),
                         'id_user'   => $this->session->userdata('id_user'),
                         'gambar_artikel'  => $upload_data['uploads']['file_name']
                     );
@@ -108,6 +108,7 @@ class Artikel extends CI_Controller {
                         'judul_artikel' => $this->input->post('judul_artikel'),
                         'slug_artikel' => url_title($this->input->post('judul_artikel'),'dash',TRUE),
                         'isi_artikel' => $this->input->post('isi_artikel'),
+                        'tgl_artikel' => date('Y-m-d'),
                         'id_user'   => $this->session->userdata('id_user'),
                         'gambar_artikel'  => $upload_data['uploads']['file_name']
                     );
@@ -119,6 +120,7 @@ class Artikel extends CI_Controller {
                     'id_artikel' => $id_artikel,
                     'judul_artikel' => $this->input->post('judul_artikel'),
                     'slug_artikel' => url_title($this->input->post('judul_artikel'),'dash',TRUE),
+                    'tgl_artikel' => date('Y-m-d'),
                     'isi_artikel' => $this->input->post('isi_artikel'),
                     'id_user'   => $this->session->userdata('id_user')
                 );
