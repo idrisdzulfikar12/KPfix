@@ -9,9 +9,9 @@
 </section>
 <section id="content">
 	<div class="container">
-		<div class="row"> 
+		<div class="row col-md-12 mb-12"> 
 			<p>Bidang Pemberdayaan Masyarakat dan Data Informasi mempunyai fungsi:</p>
-			<ol>
+			<ol class="col-md-12 mb-12">
 				<li>Perencanaan program, kegiatan dan anggaran;</li>
 				<li>Pendistribusian tugas kepada bawahan;</li>
 				<li>Pemberian petunjuk kepada bawahan;</li>

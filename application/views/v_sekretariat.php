@@ -9,12 +9,12 @@
 </section>
 <section id="content">
 	<div class="container">
-		<div class="row"> 
+		<div class="row col-md-12 mb-12"> 
 			<p class="text-justify">
 				Sekretaris mempunyai tugas merencanakan, mengkoordinasikan dan mensinkronisasikan, membina, mengawasi dan mengendalikan serta mengevaluasi pelaksanaan tugas Kesekretariatan Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender, Bidang Pemenuhan Hak Anak, Bidang Perlindungan Perempuan dan Anak, Bidang Pemberdayaan Masyarakat dan Data Informasi dan UPTD.
 			</p>
 			<p>Sekretariat mempunyai fungsi:</p>
-			<ol>
+			<ol class="col-md-12 mb-12">
 				<li>Perencanaan program, kegiatan dan anggaran;</li>
 				<li>Pendistribusian tugas kepada bawahan;</li>
 				<li>Pemberian petunjuk kepada bawahan;</li>

@@ -79,6 +79,7 @@
 <script src="<?= base_url() ?>template/front-end/js/custom.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/owl-carousel/owl.carousel.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/about.js"></script>
+<script src="<?= base_url() ?>template/front-end/js/scrollmagic/ScrollMagic.min.js"></script>
 <!-- DataTables JavaScript -->
 <script src="<?= base_url() ?>template/back-end/js/dataTables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>template/back-end/js/dataTables/dataTables.bootstrap.min.js"></script>

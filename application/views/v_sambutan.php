@@ -26,7 +26,7 @@
     <div class="container py-5">
     <div class="about">
         <div class="row justify-content-center">
-            <div class="col-lg-10">
+            <div class="col-lg-11">
                 <div class="card border-0 shadow-lg">
                     <div class="row g-0 align-items-center">
                         <!-- Image Section -->
