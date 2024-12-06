@@ -1,41 +1,43 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="widget">
-					<h5 class="widgetheading">Our Contact</h5><br>
+					<h5 class="widgetheading">Our Contact</h5>
 					<address>
-					<strong>DP3A</strong><br>
-					Jl. Prof. Soedarto No.116, Sumurboto, Kec. Banyumanik, Kota Semarang<br>
-					Jawa Tengah 50269</address>
+						<strong>DP3A</strong><br>
+						Jl. Prof. Soedarto No.116, Sumurboto, Kec. Banyumanik, Kota Semarang<br>
+						Jawa Tengah 50269
+					</address>
 					<p>
-						<i class="icon-phone"></i> (024) 76402252  <br>
+						<i class="icon-phone"></i> (024) 76402252 <br>
 						<i class="icon-envelope-alt"></i> dinasp3a.kotasemarang@gmail.com
 					</p>
 				</div>
 			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Quick Links</h5>
-					<ul class="link-list">
-						<li><a href="#">Latest Events</a></li>
-					</ul>
+			<div class="col-lg-4">
+				<div class="widget" style="color: white;">
+					<h5 class="widgetheading" style="color: white;">Tentang DP3A Kota Semarang</h5>
+					<p style="color: white;">
+						DPPPA Kota Semarang merupakan unsur pelaksanaan urusan pemerintah Kota Semarang bidang Pemberdayaan Perempuan dan Perlindungan Anak. Terbentuk berdasarkan Peraturan Daerah Kota Semarang No 14 Tahun 2016.
+					</p>
+					<p style="color: white;">
+						Sebelumnya lembaga yang berwenang dalam melakukan perlindungan hukum terhadap perempuan dan anak adalah Badan Pemberdayaan Masyarakat, Perempuan dan Keluarga Berencana (Bapermas, Perempuan dan KB).
+					</p>
 				</div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="widget">
-					<h5 class="widgetheading">Latest posts</h5>
-					<ul class="link-list">
-					
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Recent News</h5>
-					<ul class="link-list">
-						
-					</ul>
+					<h5 class="widgetheading">Location</h5>
+					<iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.670574999327!2d110.4078!3d-7.054567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c31a54f4c91%3A0xc3b3b6878f3a2ff5!2sDP3A%20Semarang!5e0!3m2!1sen!2sid!4v1692920930214!5m2!1sen!2sid" 
+						width="100%" 
+						height="200" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy" 
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
 				</div>
 			</div>
 		</div>
@@ -46,7 +48,7 @@
 				<div class="col-lg-6">
 					<div class="copyright">
 						<p>
-							<span>&copy; Dinas Pemberdayaan Perempuan dan Perlindungan Anak </span>
+							<span>&copy; Dinas Pemberdayaan Perempuan dan Perlindungan Anak</span>
 						</p>
 					</div>
 				</div>
@@ -61,8 +63,7 @@
 			</div>
 		</div>
 	</div>
-	</footer>
-</div>
+</footer>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
