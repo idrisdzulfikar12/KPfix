@@ -1,12 +1,14 @@
-<div class="about">
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Galeri</h2>
+			</div>
+		</div>
+	</div>
+</section>
+<div>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="section_title_container text-center">
-                    <h2 class="section_title">Galeri</h2>
-                </div>
-            </div>
-        </div>
         <div class="row about_row">
             
             <?php foreach($galeri as $key => $value) { ?>

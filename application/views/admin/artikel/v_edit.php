@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+<script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -19,10 +22,10 @@
                 <label>Judul artikel</label>
                 <input class="form-control" value="<?= $artikel->judul_artikel ?>" type="text" name="judul_artikel" placeholder="Judul artikel" required>
             </div>
-            
-            <div class="form-group">
-                <label>Isi artikel</label>
-                <textarea name="isi_artikel" id="editor" required><?= $artikel->isi_artikel ?></textarea>
+
+            <div class="form-group" >
+                    <input type="hidden" id="isi_artikel" name="isi_artikel" value="<?= $artikel->isi_artikel ?>">
+                    <trix-editor input="isi_artikel"></trix-editor>
             </div>
 
             <div class="form-group">

@@ -18,7 +18,6 @@
                         <th>No</th>
                         <th>Judul Berita</th>
                         <th>Slug Berita</th>
-                        <th>Isi Berita</th>
                         <th>Tanggal</th>
                         <th>Gambar</th>
                         <th>Nama Publisher</th>
@@ -31,7 +30,6 @@
                         <td><?= $no++; ?></td>
                         <td><?= $value->judul_berita ?></td>
                         <td><?= $value->slug_berita ?></td>
-                        <td><?= $value->isi_berita ?></td>
                         <td><?= $value->tgl_berita ?></td>
                         <td><img src="<?= base_url('gambar_berita/'.$value->gambar_berita) ?>" width="150px"></td>
                         <td><?= $value->nama_user ?></td>

@@ -17,10 +17,10 @@
               </li>
             </ul>
         </div>
-	<!-- end slider -->
- 
-	</section>
-	<section class="callaction">
+	<!-- end slider --> 
+</section>
+
+<section class="callaction">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -43,22 +43,22 @@
 		</div>
 	</section>
 	
-	<section id="content">
-		<div class="slider-container">
-			<div class="slider-wrapper">
-				<div class="slider-item">
-					<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Kecil/112.png" alt="Slide 1">
-				</div>
-				<div class="slider-item">
-					<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Utama/2024/DSC05409.jpg" alt="Slide 2">
-				</div>
+<section id="content">
+	<div class="slider-container">
+		<div class="slider-wrapper">
+			<div class="slider-item">
+				<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Kecil/112.png" alt="Slide 1">
 			</div>
-			<div class="slider-nav">
-				<button class="prev">&#10094;</button>
-				<button class="next">&#10095;</button>
+			<div class="slider-item">
+				<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Utama/2024/DSC05409.jpg" alt="Slide 2">
 			</div>
 		</div>
-	</section>&nbsp;
+		<div class="slider-nav">
+			<button class="prev">&#10094;</button>
+			<button class="next">&#10095;</button>
+		</div>
+	</div>
+</section>&nbsp;
 		
 	<section id="pappihebat" class="section" style="background-color:#ffffff;">
 		<div align="center">

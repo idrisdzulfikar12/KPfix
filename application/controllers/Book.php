@@ -78,7 +78,7 @@ class Book extends CI_Controller {
                 if (!$this->upload->do_upload('file_book'))
                 {
                     $data = array(
-                        'title' => 'Edit Standar Operasional Prosedur',
+                        'title' => 'Edit E-Book',
                         'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
                         'book' => $this->m_book->detail($id_book),
                         'error_upload' => $this->upload->display_errors(),
@@ -117,7 +117,7 @@ class Book extends CI_Controller {
                 redirect('book');
         }
         $data = array(
-            'title' => 'Add Standar Operasional Prosedur',
+            'title' => 'Edit E-Book',
             'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
             'book' => $this->m_book->detail($id_book),
             'isi' => 'admin/book/v_edit'

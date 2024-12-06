@@ -29,6 +29,7 @@ class Pelapor extends CI_Controller {
 
         // Simpan data kasus
         $data_kasus = array(
+            'pelapor_id' => $pelapor_id,
             'jenis_kasus' => $this->input->post('jenis_kasus'),
             'bentuk_kekerasan' => $this->input->post('bentuk_kekerasan'),
             'tempat_kejadian' => $this->input->post('tempat_kejadian'),
