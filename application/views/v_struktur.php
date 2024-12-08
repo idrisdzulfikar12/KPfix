@@ -81,7 +81,7 @@
                         
                         <!-- Additional text -->
 						<div class="text-center fade-in" id="additional-text">
-                            <span class="italic-text">Klik gambar untuk melihat lebih jelas</span>
+                            <span class="italic-text">Klik tombol untuk melihat lebih jelas</span>
                         </div>
                     </div>
                 </div>  

@@ -87,13 +87,75 @@
 .search-form button:focus {
     outline: none; /* Menghilangkan border fokus */
 }
+/* Slider Wrapper */
+#featured {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Flexslider styles */
+.flexslider {
+    position: relative;
+    margin: 0;
+}
+
+.flexslider .slides img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Navigation arrows */
+.flexslider .flex-direction-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Allows clicks to pass through transparent areas */
+}
+
+.flexslider .flex-prev,
+.flexslider .flex-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all; /* Enables click functionality on the buttons */
+    z-index: 10;
+}
+
+.flexslider .flex-prev {
+    left: 20px;
+}
+
+.flexslider .flex-next {
+    right: 20px;
+}
+
+/* Button hover effect */
+.flexslider .flex-prev:hover,
+.flexslider .flex-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
 </style>
 
 <section id="featured">
 	 
 	<!-- Slider -->
         <div id="main-slider" class="flexslider">
-            <ul class="slides">
+            <ul class="slides" style="margin-right:30px;">
               <li>
                 <img src="<?= base_url() ?>template/front-end/img/slides/1.png" alt="" />
               </li>
@@ -103,7 +165,7 @@
               <li>
                 <img src="<?= base_url() ?>template/front-end/img/slides/3.png" alt="" />
               </li>
-			  <li>
+			        <li>
                 <img src="<?= base_url() ?>template/front-end/img/slides/4.png" alt="" />
               </li>
             </ul>

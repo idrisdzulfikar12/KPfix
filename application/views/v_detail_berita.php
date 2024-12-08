@@ -35,7 +35,7 @@
 </style>
 <!-- Blog -->
 
-	<div class="blog">
+	<div style="margin-top: 20px;">
 		<div class="container">
 			<div class="row">
 
