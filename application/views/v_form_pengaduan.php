@@ -141,6 +141,7 @@ tr:hover {
     }
 </style>
 <body>
+<br><br><br><br><br>
 <center><h1>Form Pengaduan</h1></center>
     <div class="form-container">
         <form action="<?php echo base_url('pelapor/submit'); ?>" method="post">

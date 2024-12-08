@@ -1,7 +1,7 @@
 <section id="inner-headline">
 	<div class="container">
 		<div class="row">
-        <div class="col-lg-12" style="text-align: center;">
+        <div class="col-lg-12">
             <h2 class="pageTitle">Kontak</h2>
         </div>
 
@@ -92,7 +92,7 @@
                         Temukan Kami
                     </h2><br><br><br>
                     
-                    <div class="map">
+                    <div class="map wow fadeInDown animated">
                         <div class="mapouter">
                             <iframe 
                                 width="600" 

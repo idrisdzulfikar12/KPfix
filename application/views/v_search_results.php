@@ -44,7 +44,7 @@ h2 {
 
 
 
-<section class="courses">
+<section>
     <div class="container">
         <div class="row">
             <?php if (!empty($search_results_berita)): ?>

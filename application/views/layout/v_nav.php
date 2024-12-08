@@ -1,3 +1,9 @@
+<style>
+	.dropdown{
+		background-color: black;
+		border-radius: 5px;
+	}
+</style>
 
 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
