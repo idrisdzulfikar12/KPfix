@@ -71,7 +71,8 @@
                                  data-wow-delay="1.4s">
                                 <input type="submit" 
                                        id="contact-submit" 
-                                       class="btn btn-default btn-send" 
+                                       class="btn btn-default btn-send"
+                                       style="border-radius: 5px;" 
                                        value="Kirim Pesan">
                             </div>
                             <div id="notification" class="notification">
@@ -89,15 +90,15 @@
                         data-wow-duration="500ms" 
                         data-wow-delay=".3s">
                         Temukan Kami
-                    </h2>
+                    </h2><br><br><br>
                     
                     <div class="map">
                         <div class="mapouter">
                             <iframe 
                                 width="600" 
-                                height="400" 
+                                height="300" 
                                 id="gmap_canvas" 
-                                src="https://maps.google.com/maps?q=Gedung%20Pandanaran&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15838.512727076839!2d110.4280968!3d-7.0529021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c00e19e3db1%3A0xde471feee960ce9f!2sDinas%20Pemberdayaan%20Perempuan%20Dan%20Perlindungan%20Anak!5e0!3m2!1sid!2sid!4v1733627435140!5m2!1sid!2sid"
                                 frameborder="0" 
                                 scrolling="no" 
                                 marginheight="0" 

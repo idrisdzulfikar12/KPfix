@@ -29,9 +29,9 @@
 				<div class="widget">
 					<h5 class="widgetheading">Lokasi</h5><br>
 					<iframe 
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.670574999327!2d110.4078!3d-7.054567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c31a54f4c91%3A0xc3b3b6878f3a2ff5!2sDP3A%20Semarang!5e0!3m2!1sen!2sid!4v1692920930214!5m2!1sen!2sid"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15838.512727076839!2d110.4280968!3d-7.0529021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c00e19e3db1%3A0xde471feee960ce9f!2sDinas%20Pemberdayaan%20Perempuan%20Dan%20Perlindungan%20Anak!5e0!3m2!1sid!2sid!4v1733627435140!5m2!1sid!2sid"
 						width="100%" 
-						height="200" 
+						height="235" 
 						style="border:0;" 
 						allowfullscreen="" 
 						loading="lazy" 
