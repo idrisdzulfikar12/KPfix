@@ -19,6 +19,7 @@
 <link href="<?= base_url() ?>template/front-end/css/about.css" rel="stylesheet"> 
 <link href="<?= base_url() ?>template/front-end/css/about_responsive.css"rel="stylesheet">
 <link href="<?= base_url() ?>template/front-end/css/materi.css"rel="stylesheet">
+<link href="<?= base_url() ?>template/front-end/styles/courses.css" rel="stylesheet" type="text/css" >
 
 <!-- DataTables CSS -->
 <link href="<?= base_url() ?>template/back-end/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">

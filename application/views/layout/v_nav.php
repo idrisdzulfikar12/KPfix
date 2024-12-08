@@ -48,6 +48,7 @@
 								<li><a href="https://sidamas.dp3a.semarangkota.go.id/">SI DAMAS</a></li>
 							</ul>
 						</li>
+						<li><a href="<?= base_url('home/kontak')?>">Kontak</a></li> 
                     </ul>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Des 2024 pada 04.21
+-- Waktu pembuatan: 08 Des 2024 pada 04.06
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -352,6 +352,29 @@ INSERT INTO `tbl_glosary` (`id_glosary`, `judul_glosary`, `materi_glosary`) VALU
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_kontak`
+--
+
+CREATE TABLE `tbl_kontak` (
+  `id_kontak` int(11) NOT NULL,
+  `nama_kontak` varchar(100) DEFAULT NULL,
+  `email_kontak` varchar(100) DEFAULT NULL,
+  `subjek_kontak` varchar(255) DEFAULT NULL,
+  `pesan_kontak` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_kontak`
+--
+
+INSERT INTO `tbl_kontak` (`id_kontak`, `nama_kontak`, `email_kontak`, `subjek_kontak`, `pesan_kontak`) VALUES
+(1, 'Galuh', 'muhgaluh@gmail.com', 'Bug website', 'Jadi web ini'),
+(2, 'Ilham', 'ilham@gmail.com', 'Error website', 'Jadi web ini memiliki error'),
+(3, 'Alfi', 'alfi@gmail.com', 'Bug website', 'Bug di bagian a');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_sop`
 --
 
@@ -471,6 +494,12 @@ ALTER TABLE `tbl_glosary`
   ADD PRIMARY KEY (`id_glosary`);
 
 --
+-- Indeks untuk tabel `tbl_kontak`
+--
+ALTER TABLE `tbl_kontak`
+  ADD PRIMARY KEY (`id_kontak`);
+
+--
 -- Indeks untuk tabel `tbl_sop`
 --
 ALTER TABLE `tbl_sop`
@@ -559,10 +588,16 @@ ALTER TABLE `tbl_glosary`
   MODIFY `id_glosary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
+-- AUTO_INCREMENT untuk tabel `tbl_kontak`
+--
+ALTER TABLE `tbl_kontak`
+  MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT untuk tabel `tbl_sop`
 --
 ALTER TABLE `tbl_sop`
-  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`

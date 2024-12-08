@@ -44,10 +44,7 @@
 					<div class="blog_content">
 						<div class="blog_title"><?= $artikel->judul_artikel ?></div>
 						<div class="blog_meta">
-							<ul>
-								<li>Post on <a href="#"><?= $artikel->tgl_artikel ?></a></li>
-								<li>By <a href="#"><?= $artikel->nama_user ?></a></li>
-							</ul>
+								<strong>Post on <?= $artikel->tgl_artikel ?> | By <?= $artikel->nama_user ?></strong>
 						</div>
 						<div class="blog_image"><img src="<?= base_url('gambar_artikel/').$artikel->gambar_artikel ?>" alt=""></div>
 						<p><?= $artikel->isi_artikel ?></p>
