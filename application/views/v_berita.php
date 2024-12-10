@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/courses.css">
 <link href="<?= base_url() ?>template/front-end/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="<?= base_url() ?>template/front-end/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/plugins/OwlCarousel2-2.2.1/owl.carousel.css">

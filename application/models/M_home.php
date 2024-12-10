@@ -138,4 +138,31 @@ class M_home extends CI_Model {
         $this->db->limit(10);
         return $this->db->get()->result();
     }
+
+    public function latest_berita_home()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->order_by('id_berita', 'desc');  // Mengurutkan berita berdasarkan id_berita terbaru
+        $this->db->limit(3);  // Ambil 3 berita terbaru
+        return $this->db->get()->result();  // Mengembalikan hasil query sebagai array objek
+    }
+
+    public function search_berita($query)
+    {
+        $this->db->like('judul_berita', $query);
+        $this->db->or_like('isi_berita', $query);
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        return $this->db->get()->result();
+    }
+
+    public function search_artikel($query)
+    {
+        $this->db->like('judul_artikel', $query);
+        $this->db->or_like('isi_artikel', $query);
+        $this->db->select('*');
+        $this->db->from('tbl_artikel');
+        return $this->db->get()->result();
+}
 }

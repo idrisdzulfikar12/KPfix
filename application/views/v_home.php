@@ -1,8 +1,161 @@
+<style>
+  /* Hover effect for feature cards */
+  .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hover effect for icon */
+  .feature-icon {
+    color: #4CAF50;
+    transition: color 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon {
+    color: #FF5722;  /* Change icon color on hover */
+    transform: scale(1.2); /* Make the icon grow slightly on hover */
+  }
+
+  /* Underline effect for text */
+  .feature-card h5 {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px; /* Added more margin to move text further down */
+  }
+
+  .feature-card h5::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #FF5722;
+    transition: width 0.3s ease;
+  }
+
+  .feature-card:hover h5::after {
+    width: 100%;
+  }
+
+  .feature-card:hover h5 {
+    color: #FF5722;  /* Change text color on hover */
+  }
+  /* Style untuk form pencarian */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;  /* Menambahkan jarak lebih jauh ke bawah */
+}
+
+.search-form input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 25px; /* Membuat input lebih rounded */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+    border-color: #007bff;  /* Mengubah warna border saat input difokuskan */
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* Membuat tombol lebih rounded */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+.search-form button:focus {
+    outline: none; /* Menghilangkan border fokus */
+}
+/* Slider Wrapper */
+#featured {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Flexslider styles */
+.flexslider {
+    position: relative;
+    margin: 0;
+}
+
+.flexslider .slides img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Navigation arrows */
+.flexslider .flex-direction-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Allows clicks to pass through transparent areas */
+}
+
+.flexslider .flex-prev,
+.flexslider .flex-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all; /* Enables click functionality on the buttons */
+    z-index: 10;
+}
+
+.flexslider .flex-prev {
+    left: 20px;
+}
+
+.flexslider .flex-next {
+    right: 20px;
+}
+
+/* Button hover effect */
+.flexslider .flex-prev:hover,
+.flexslider .flex-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+</style>
+
 <section id="featured">
 	 
 	<!-- Slider -->
         <div id="main-slider" class="flexslider">
-            <ul class="slides">
+            <ul class="slides" style="margin-right:30px;">
               <li>
                 <img src="<?= base_url() ?>template/front-end/img/slides/1.png" alt="" />
               </li>
@@ -12,7 +165,7 @@
               <li>
                 <img src="<?= base_url() ?>template/front-end/img/slides/3.png" alt="" />
               </li>
-			  <li>
+			        <li>
                 <img src="<?= base_url() ?>template/front-end/img/slides/4.png" alt="" />
               </li>
             </ul>
@@ -20,15 +173,25 @@
 	<!-- end slider --> 
 </section>
 
+<div class="container">
+    <!-- Form Pencarian -->
+    <form method="get" action="<?= site_url('home/search'); ?>" class="search-form">
+        <input type="text" name="query" placeholder="Cari berita atau artikel..." required>
+        <button type="submit">Cari</button>
+    </form>
+</div>
+
 <section class="callaction">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="aligncenter"><h1 class="aligncenter">Sambutan Kepala Dinas</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>Puji syukur kami ucapkan kepada Allah SWT atas perkenan-Nya Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang  telah mempunyai website resmi yang menampilkan informasi mengenai Pemberdayaan Perempuan dan Perlindungan Anak di Kota Semarang. 
+			<div class="col-lg-12" style="margin-left: 28px;">
+				<div class="aligncenter"><h1 class="aligncenter">Sambutan Kepala Dinas</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span><br>
+					<p class="text-justify">Puji syukur kami ucapkan kepada Allah SWT atas perkenan-Nya Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang  telah mempunyai website resmi yang menampilkan informasi mengenai Pemberdayaan Perempuan dan Perlindungan Anak di Kota Semarang. </p>
 
-					Tidak lupa kami ucapkan selamat datang di Website kami. Website ini merupakan salah satu bentuk upaya konkrit dari kami untuk menyetarakan dengan lembaga-lembaga lain di Indonesia yang telah terlebih dahulu memasuki dunia informasi global. 
+					<p class="text-justify">Tidak lupa kami ucapkan selamat datang di Website kami. Website ini merupakan salah satu bentuk upaya konkrit dari kami untuk menyetarakan dengan lembaga-lembaga lain di Indonesia yang telah terlebih dahulu memasuki dunia informasi global.</p> 
 					
-					Selain itu diharapkan bahwa website ini dapat menjadi penyedia informasi bagi semua pihak yang memerlukan informasi seputar Pemberdayaan Perempuan dan Perlindungan Anak di lingkungan Pemerintah Kota Semarang.</div>
+					<p class="text-justify">Selain itu diharapkan bahwa website ini dapat menjadi penyedia informasi bagi semua pihak yang memerlukan informasi seputar Pemberdayaan Perempuan dan Perlindungan Anak di lingkungan Pemerintah Kota Semarang.</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -36,8 +199,12 @@
 	<section class="callaction">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="aligncenter"><h1 class="aligncenter">Website Resmi DP3A Kota Semarang</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>Website Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang ini merupakan sarana media pelayanan data dan informasi bagi seluruh lapisan masyarakat Kota Semarang yang bertujuan memberikan pelayanan informasi dan data melalui media elektronik.</div>
+				<div class="col-lg-12" style="margin-left: 28px;">
+					<div class="aligncenter">
+						<h1 class="aligncenter">Website Resmi DP3A Kota Semarang</h1>
+						<span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>
+						<p class="text-justify"> Website Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang ini merupakan sarana media pelayanan data dan informasi bagi seluruh lapisan masyarakat Kota Semarang yang bertujuan memberikan pelayanan informasi dan data melalui media elektronik.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -112,67 +279,46 @@
 </section>
 
 <section class="courses">
-<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="aligncenter">
+                    <h2 class="aligncenter">Berita Terbaru</h2>
+                    <span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>
+                    Semakin aku banyak membaca, semakin aku banyak berpikir; semakin aku banyak belajar, semakin aku sadar bahwa aku tak mengetahui apa pun.
+                </div>
+            </div>
+            &nbsp;
 
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="aligncenter"><h2 class="aligncenter">Berita Terbaru</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>Semakin aku banyak membaca, semakin aku banyak berpikir; semakin aku banyak belajar, semakin aku sadar bahwa aku tak mengetahui apa pun.
+			<div class="row courses_row">
+			<?php if (!empty($latest_berita_home)): ?>
+				<?php foreach($latest_berita_home as $key => $value){ ?>
+
+				<!-- Course -->
+				<div class="col-lg-4 course_col">
+					<div class="course">
+						<div class="course_image"><img src="<?= base_url('gambar_berita/'.$value->gambar_berita) ?>" width="100%" height="250"></div>
+						<div class="course_body">
+							<h3 class="course_title"><a href="<?= base_url('home/detail_berita/'.$value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita),0,30) ?>....</a></h3>
+							<div class="course_text">
+								<p><?= substr(strip_tags($value->isi_berita),0,100) ?></p>
+							</div>
+						</div>
+						<div class="course_footer">
+							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+								<div class="course_info">
+									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<span><?= $value->tgl_berita ?></span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<?php }?>
+			<?php else: ?>
+				<p>Tidak ada berita terbaru.</p>
+			<?php endif; ?>
 			</div>
-			&nbsp;
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-	<div class="blog-item-wrapper">
-	<div class="blog-item-img">
-							<img src="https://dp3a.semarangkota.go.id/storage/app/uploads/public/668/cf0/c1c/thumb_341_350_230_0_0_crop.png" alt="">
-	<a class="post-link" href="https://dp3a.semarangkota.go.id/blog/post/deklarasi-satgas-ppks-undip-bentuk-komitmen-menciptakan-ruang-aman-dari-kekerasan-seksual"><i class="lnr lnr-link"></i></a>       
-						</div>   
-	<div class="blog-item-text">
-	<h3><a href="https://dp3a.semarangkota.go.id/blog/post/deklarasi-satgas-ppks-undip-bentuk-komitmen-menciptakan-ruang-aman-dari-kekerasan-seksual">Deklarasi Satgas PPKS UNDIP : Bentuk Komitmen Menciptakan Ruang Aman dari Kekerasan Seksual</a></h3>
-	<div class="meta-tags">
-		<span class="date"><i class="lnr lnr-calendar-full"></i>Jul 09, 2024</span>
-									<span class="comments"><a href="https://dp3a.semarangkota.go.id/blog/post/deklarasi-satgas-ppks-undip-bentuk-komitmen-menciptakan-ruang-aman-dari-kekerasan-seksual#disqus_thread">0 Comments</a></span>
-								</div>
-	<p></p><p></p>
-	<p>Kota Semarang – Seiring maraknya kasus kekerasan seksual yang terjadi di lingkungan universitas, telah mendorong kesadaran dari seluruh civitas akade...</p>...<p></p>
-							<a href="https://dp3a.semarangkota.go.id/blog/post/deklarasi-satgas-ppks-undip-bentuk-komitmen-menciptakan-ruang-aman-dari-kekerasan-seksual" class="btn btn-common btn-rm">Baca Selengkapnya</a>
-						</div>
-	</div>
-	</div>
-	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-	<div class="blog-item-wrapper">
-	<div class="blog-item-img">
-							<img src="https://dp3a.semarangkota.go.id/storage/app/uploads/public/668/62d/142/thumb_340_350_230_0_0_crop.jpg" alt="">
-	<a class="post-link" href="https://dp3a.semarangkota.go.id/blog/post/pudakpayung-banyumanik-masuk-4-besar-dalam-lomba-kelurahan-tingkat-provinsi-jawa-tengah-tahun-2024"><i class="lnr lnr-link"></i></a>       
-						</div>   
-	<div class="blog-item-text">
-	<h3><a href="https://dp3a.semarangkota.go.id/blog/post/pudakpayung-banyumanik-masuk-4-besar-dalam-lomba-kelurahan-tingkat-provinsi-jawa-tengah-tahun-2024">Pudakpayung Banyumanik masuk 4 besar dalam Lomba Kelurahan Tingkat Provinsi Jawa Tengah Tahun 2024</a></h3>
-	<div class="meta-tags">
-		<span class="date"><i class="lnr lnr-calendar-full"></i>Jul 04, 2024</span>
-									<span class="comments"><a href="https://dp3a.semarangkota.go.id/blog/post/pudakpayung-banyumanik-masuk-4-besar-dalam-lomba-kelurahan-tingkat-provinsi-jawa-tengah-tahun-2024#disqus_thread">0 Comments</a></span>
-								</div>
-	<p></p><p>DP3A pada Tanggal 20 Juni 2024<span style="background-color: transparent;">&nbsp;selesai dalam acara Pemaparan dan Klarifikasi Lapangan Lomba Desa/Kelurahan Tingkat Provinsi Jawa Tengah Tahun 2024 di ...</span></p>...<p></p>
-							<a href="https://dp3a.semarangkota.go.id/blog/post/pudakpayung-banyumanik-masuk-4-besar-dalam-lomba-kelurahan-tingkat-provinsi-jawa-tengah-tahun-2024" class="btn btn-common btn-rm">Baca Selengkapnya</a>
-						</div>
-	</div>
-	</div>
-	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-	<div class="blog-item-wrapper">
-	<div class="blog-item-img">
-							<img src="https://dp3a.semarangkota.go.id/storage/app/uploads/public/668/4cb/8a7/thumb_339_350_230_0_0_crop.png" alt="">
-	<a class="post-link" href="https://dp3a.semarangkota.go.id/blog/post/jauhi-narkoba-selamatkan-generasi-penerus-bangsa"><i class="lnr lnr-link"></i></a>       
-						</div>   
-	<div class="blog-item-text">
-	<h3><a href="https://dp3a.semarangkota.go.id/blog/post/jauhi-narkoba-selamatkan-generasi-penerus-bangsa">Jauhi Narkoba Selamatkan Generasi Penerus Bangsa</a></h3>
-	<div class="meta-tags">
-		<span class="date"><i class="lnr lnr-calendar-full"></i>Jul 03, 2024</span>
-									<span class="comments"><a href="https://dp3a.semarangkota.go.id/blog/post/jauhi-narkoba-selamatkan-generasi-penerus-bangsa#disqus_thread">0 Comments</a></span>
-								</div>
-	<p></p><p>United Nations Office on Drugs and Crime (UNODC) pada 7 Desember 1987 telah mentapkan Hari Anti Narkoba Internasional yang akan diperingati pada setia...</p>...<p></p>
-							<a href="https://dp3a.semarangkota.go.id/blog/post/jauhi-narkoba-selamatkan-generasi-penerus-bangsa" class="btn btn-common btn-rm">Baca Selengkapnya</a>
-						</div>
-	</div>
-	</div>
-	</div>
-	</div>
+        </div>
+    </div>
 </section>

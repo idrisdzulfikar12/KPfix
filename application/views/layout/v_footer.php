@@ -56,8 +56,8 @@
 					<ul class="social-network">
 						<li><a href="https://www.facebook.com/dpppa.kotasemarang" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="https://x.com/i/flow/login?redirect_after_login=%2FDp3aSmrg" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="https://www.instagram.com/dp3a_kotasemarang/" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UC-LWWQaUOam99RQOc4HYHFA" data-placement="top" title="YOutube"><i class="fa fa-youtube"></i></a></li>
 					</ul>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-<div class="about">
+<div style="margin-top: 20px;">
     <div class="container">
         <div class="row">
             <div class="col">

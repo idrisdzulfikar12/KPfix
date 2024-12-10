@@ -53,6 +53,9 @@
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
+                            <li>
+                                <a href="<?= base_url('kontak')?>"><i class="fa fa-phone fa-fw"></i> Kontak</a>
+                            </li>
                             <li class="active">
                                 <a href="<?= base_url('login/logout') ?>"><i class="fa fa-sign-out"></i> Logout</a>
                                 <!-- /.nav-second-level -->

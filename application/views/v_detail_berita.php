@@ -35,7 +35,7 @@
 </style>
 <!-- Blog -->
 
-	<div class="blog">
+	<div style="margin-top: 20px;">
 		<div class="container">
 			<div class="row">
 
@@ -44,10 +44,7 @@
 					<div class="blog_content">
 						<div class="blog_title"><?= $berita->judul_berita ?></div>
 						<div class="blog_meta">
-							<ul>
-								<li>Post on <a href="#"><?= $berita->tgl_berita ?></a></li>
-								<li>By <a href="#"><?= $berita->nama_user ?></a></li>
-							</ul>
+								<strong>Post on <?= $berita->tgl_berita ?> | By <?= $berita->nama_user ?></strong>
 						</div>
 						<div class="blog_image"><img src="<?= base_url('gambar_berita/').$berita->gambar_berita ?>" alt=""></div>
 						<p><?= $berita->isi_berita ?></p>

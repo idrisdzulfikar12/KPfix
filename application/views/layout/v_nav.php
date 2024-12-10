@@ -1,3 +1,9 @@
+<style>
+	.dropdown{
+		background-color: black;
+		border-radius: 5px;
+	}
+</style>
 
 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
@@ -48,6 +54,7 @@
 								<li><a href="https://sidamas.dp3a.semarangkota.go.id/">SI DAMAS</a></li>
 							</ul>
 						</li>
+						<li><a href="<?= base_url('home/kontak')?>">Kontak</a></li> 
                     </ul>
                 </div>
             </div>

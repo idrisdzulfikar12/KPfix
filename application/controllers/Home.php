@@ -4,6 +4,7 @@ class Home extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->load->helper('text');
         $this->load->model('m_home');
     }
 
@@ -11,9 +12,37 @@ class Home extends CI_Controller {
     {
         $data = array(
                     'title' => 'Web Dinas',
+                    'latest_berita_home' => $this->m_home->latest_berita_home(),
                     'isi' => 'v_home'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);      
+    }
+
+    public function search()
+    {
+        // Ambil query pencarian dari URL atau input form
+        $query = $this->input->get('query');
+
+        // Jika query pencarian tidak kosong
+        if (!empty($query)) {
+            // Lakukan pencarian untuk berita dan artikel
+            $data['search_results_berita'] = $this->m_home->search_berita($query);
+            $data['search_results_artikel'] = $this->m_home->search_artikel($query);
+        } else {
+            // Jika tidak ada query, tampilkan hasil kosong
+            $data['search_results_berita'] = [];
+            $data['search_results_artikel'] = [];
+        }
+
+        // Mengambil berita terbaru untuk ditampilkan di samping hasil pencarian
+        $data['latest_berita'] = $this->m_home->latest_berita();
+
+        // Set title dan view untuk halaman pencarian
+        $data['title'] = 'Hasil Pencarian';
+        $data['isi'] = 'v_search_results'; // View baru untuk menampilkan hasil pencarian
+
+        // Muat view layout
+        $this->load->view('layout/v_wrapper', $data, FALSE);
     }
 
     public function sambutan()
@@ -259,6 +288,15 @@ class Home extends CI_Controller {
                     'title' => 'Dokumen Perencanaan',
                     'dok' => $this->m_home->dok(),
                     'isi' => 'v_dok'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);   
+    }
+
+    public function kontak()
+    {
+        $data = array(
+                    'title' => 'Kontak',
+                    'isi' => 'v_kontak'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
     }
