@@ -5,25 +5,23 @@
 				<div class="widget">
 					<h5 class="widgetheading">Our Contact</h5>
 					<address>
-						<strong>DP3A</strong><br>
-						Jl. Prof. Soedarto No.116, Sumurboto, Kec. Banyumanik, Kota Semarang<br>
-						Jawa Tengah 50269
+						<strong>Dinas Damkar Kota Semarang</strong>
+						<br>Jl.Madukoro Raya No.6, Kelurahan Krobokan, Kecamatan Semarang Barat<br>
 					</address>
 					<p>
-						<i class="icon-phone"></i> (024) 76402252 <br>
-						<i class="icon-envelope-alt"></i> dinasp3a.kotasemarang@gmail.com
+						<i class="icon-phone"></i>Phone: 024-113 / 024-7607076 / 024-7605871<br>
+						<i class="icon-phone"></i>Fax: 024-7607225<br>
+						<i class="icon-envelope-alt"></i>Email: kebakaran.semarangkota@gmail.com dan damkarsmg113@gmail.com
 					</p>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<div class="widget" style="color: white;">
-					<h5 class="widgetheading" style="color: white;">Tentang DP3A Kota Semarang</h5>
+					<h5 class="widgetheading" style="color: white;">Tentang Dinas Pemadam Kebakaran Kota Semarang</h5>
 					<p style="color: white;">
-						DPPPA Kota Semarang merupakan unsur pelaksanaan urusan pemerintah Kota Semarang bidang Pemberdayaan Perempuan dan Perlindungan Anak. Terbentuk berdasarkan Peraturan Daerah Kota Semarang No 14 Tahun 2016.
+					Dinas Pemadam Kebakaran adalah sebuah lembaga atau instansi yang bertanggung jawab dalam penanggulangan kebakaran dan penyelamatan jiwa serta harta benda yang terancam oleh kebakaran. Tujuan dari Dinas Pemadam Kebakaran adalah untuk melindungi masyarakat, properti, dan lingkungan dari risiko kebakaran.
 					</p>
-					<p style="color: white;">
-						Sebelumnya lembaga yang berwenang dalam melakukan perlindungan hukum terhadap perempuan dan anak adalah Badan Pemberdayaan Masyarakat, Perempuan dan Keluarga Berencana (Bapermas, Perempuan dan KB).
-					</p>
+					
 				</div>
 			</div>
 			<div class="col-lg-4">

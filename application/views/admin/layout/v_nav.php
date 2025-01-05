@@ -24,7 +24,7 @@
                                         <a href="<?= base_url('form_pengaduan')?>">Form Pengaduan</a>
                                     </li>
                                     <li>
-                                        <a href="<?= base_url('sop')?>">Standar Operasional Prosedur</a>
+                                        <a href="<?= base_url('jadwal_kunjungan')?>">Jadwal Kunjungan</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -33,22 +33,7 @@
                                 <a href="#"><i class="fa fa-edit fa-fw"></i> Publikasi<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="<?= base_url('artikel')?>">Artikel</a>
-                                    </li>
-                                    <li>
                                         <a href="<?= base_url('berita')?>">Berita</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= base_url('book')?>">E-Book</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= base_url('galeri')?>">Galeri</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= base_url('glosary')?>"> Glosary</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= base_url('dok')?>">Dokumen Perencanaan</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

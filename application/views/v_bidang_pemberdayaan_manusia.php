@@ -1,31 +1,68 @@
-<title>Bidang Pemberdayaan Masyarakat dan Data Informasi</title>
+<title>Visi Misi</title>
     <style>
-        /* Fade-in animation styles */
+        /* Keyframes for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Slightly move down for dynamic effect */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add fade-in animation to the card */
         .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            opacity: 0; /* Initial state */
+            animation: fadeIn 1s ease-in-out forwards; /* Animation properties */
+            animation-delay: 0.3s; /* Optional delay */
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* Additional styling for layout */
+        .text-justify {
+            text-align: justify;
         }
 
-        /* Custom Card Styles */
-        .card-custom {
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
-        }
-
-        .card-body {
+        .container2 {
+            text-align: center;
+            position: relative;
             padding: 20px;
         }
 
-        ol {
-            margin-left: 20px;
+        /* Custom Card Styles */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            transition: all 0.3s ease-in-out; /* Smooth transition for warp effect */
+        }
+
+        .card {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); /* Lighter and brighter gradient */
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 500px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adding responsiveness and flex-wrap enhancements */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -34,40 +71,96 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="pageTitle text-center fade-in" id="headline">Bidang Pemberdayaan Masyarakat dan Data Informasi</h2>
+                    <h2 class="pageTitle fade-in">Sumber Daya Mnusia (SDM)</h2>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="content">
-        <div class="container">
-            <div class="row"> 
-                <div class="col-md-12">
-                    <!-- Card Container -->
-                    <div class="card fade-in card-custom" id="fadeCard" style="width: 100%;">
-                        <div class="card-body">
-                            <p>Bidang Pemberdayaan Masyarakat dan Data Informasi mempunyai fungsi:</p>
-                            <ol>
-                                <li>Perencanaan program, kegiatan dan anggaran;</li>
-                                <li>Pendistribusian tugas kepada bawahan;</li>
-                                <li>Pemberian petunjuk kepada bawahan;</li>
-                                <li>Penyeliaan tugas bawahan dalam lingkup tanggung jawabnya;</li>
-                                <li>Pelaksanaan kegiatan penyusunan Sasaran Kinerja Pegawai;</li>
-                                <li>Pelaksanaan koordinasi dengan perangkat daerah lainnya dan instansi terkait;</li>
-                                <li>Pelaksanaan kegiatan penyusunan kebijakan di Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender;</li>
-                                <li>Pelaksanaan kegiatan Seksi Perkembangan Kelurahan, Seksi Pengembangan Usaha Ekonomi Masyarakat dan Teknologi Tepat Guna, dan Seksi Data dan Informasi;</li>
-                                <li>Pelaksanaan kegiatan penyusunan data dan informasi Bidang Pemberdayaan Masyarakat dan Data Informasi;</li>
-                                <li>Pelaksanaan kegiatan pengelolaan dan pertanggungjawaban keuangan di Bidang Pemberdayaan Masyarakat dan Data Informasi;</li>
-                                <li>Pelaksanaan penilaian kinerja Pegawai di lingkungan Bidang Pemberdayaan Masyarakat dan Data Informasi;</li>
-                                <li>Pelaksanaan monitoring dan evaluasi program dan kegiatan;</li>
-                                <li>Pelaksanaan penyusunan laporan program dan kegiatan; dan</li>
-                                <li>Pelaksanaan tugas kedinasan lain yang diberikan oleh pimpinan sesuai tugas dan fungsinya.</li>
-                            </ol>
-                        </div>
-                    </div>
+    <!-------------------------------------------------------------------------------------->
+    <section class="callaction">
+        <div class="container2">
+                <!-- Logo Utama -->
+                <img src="https://damkar.semarangkota.go.id/assets/images/logo-damkar-jumbotron.png" alt="Logo Damkar">
+                <!-- Deskripsi Teks -->
+                <h2 class="aligncenter">DINAS PEMADAM KEBAKARAN KOTA SEMARANG</h2>
+                <h1>YUDHA BRAMA JAYA</h1>
+        </div>
+    </section>
+    <!-------------------------------------------------------------------------------------->
+    <section>
+        <div class="container py-5">
+            <div class="card-container fade-in">
+                <div class="card">
+                    <h3><u>Petugas Pemadam Kebakaran : 246</u></h3>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        1.) Pos Induk : 85
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       2.) Pos Tugu : 24
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       3.) Pos Mijen : 14
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       4.) Pos Gunung Pati : 12
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       5.) Pos Banyu Manik : 28
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       6.) Pos Terboyo : 29
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       7.) Pos Plamongan : 32
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       8.) Pos Barito : 15
+                    </p>
                 </div>
-            </div>  
+                <div class="card">
+                    <h3><u>Driver : 48</u></h3>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        1.) Pos Induk : 11
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       2.) Pos Tugu : 4
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       3.) Pos Mijen : 4
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       4.) Pos Gunung Pati : 4
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       5.) Pos Banyu Manik : 7
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       6.) Pos Terboyo : 6
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       7.) Pos Plamongan : 6
+                    </p>
+                    <p class="card-text text-justify"
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                       8.) Pos Barito : 4
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -84,3 +177,4 @@
             }, 300);
         });
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

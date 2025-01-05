@@ -1,4 +1,4 @@
-<title>Bidang Perlindungan Perempuan dan Anak</title>
+<title>Sarana dan Prasarana</title>
     <style>
         /* Fade-in animation styles */
         .fade-in {
@@ -35,12 +35,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="pageTitle fade-in" id="headline">Bidang Perlindungan Perempuan dan Anak</h2>
+                    <h2 class="pageTitle fade-in" id="headline">Sarana dan Prasarana</h2>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Content Section -->
     <section id="content">
         <div class="container">
@@ -49,22 +48,14 @@
                     <!-- Card Container -->
                     <div class="card fade-in card-custom" id="fadeCard" style="width: 100%;">
                         <div class="card-body">
-                            <p>Bidang Perlindungan Perempuan dan Anak mempunyai fungsi:</p>
+                            <p><h1>Jumlah Armada :</h1></p>
                             <ol>
-                                <li>Perencanaan program, kegiatan dan anggaran;</li>
-                                <li>Pendistribusian tugas kepada bawahan;</li>
-                                <li>Pemberian petunjuk kepada bawahan;</li>
-                                <li>Penyeliaan tugas bawahan dalam lingkup tanggung jawabnya;</li>
-                                <li>Pelaksanaan kegiatan penyusunan Sasaran Kinerja Pegawai;</li>
-                                <li>Pelaksanaan koordinasi dengan perangkat daerah lainnya dan instansi terkait; </li>
-                                <li>Pelaksanaan kegiatan penyusunan kebijakan di Bidang Perlindungan Perempuan dan Anak; </li>
-                                <li>Pelaksanaan kegiatan Seksi Pencegahan dan Penanganan Kekerasan, Seksi Perlindungan Perempuan dan Khusus Anak, dan Seksi Jejaring Perlindungan Perempuan dan Anak; </li>
-                                <li>Pelaksanaan kegiatan penyusunan data dan informasi di Bidang Perlindungan Perempuan dan Anak; </li>
-                                <li>Pelaksanaan kegiatan pengelolaan dan pertanggungjawaban keuangan di Bidang Perlindungan Perempuan dan Anak; </li>
-                                <li>Pelaksanaan penilaian kinerja pegawai dalam lingkup tanggungjawabnya;</li>
-                                <li>Pelaksanaan monitoring dan evaluasi program dan kegiatan;</li>
-                                <li>Pelaksanaan penyusunan laporan program dan kegiatan;</li>
-                                <li>Pelaksanaan tugas kedinasan lain yang diberikan oleh pimpinan sesuai tugas dan fungsinya.</li>
+                                <h5><li>) 20 Mobil Pompa;</li></h5>
+                                <h5><li>) 2 Mobil Tangga;</li></h5>  
+                                <h5><li>) 1 Mobil Rescue;</li></h5>
+                                <h5><li>) 2 Mobil Storing;</li></h5>  
+                                <h5><li>) 1 Mobil Peralatan dan penerangan;</li></h5>
+                                <h5><li>) 1 Mobil Operasional;</li></h5>
                             </ol>
                         </div>
                     </div>

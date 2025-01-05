@@ -148,6 +148,156 @@
 .flexslider .flex-next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
+/*-------------------------------------------------------------------- */
+.section { 
+    background-image: url('template/front-end/img/double-bubble.png'); 
+}
+/*-------------------------------------------------------------------- */
+
+.container {
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+        .logo {
+            margin-top: 20px;
+            width: 200px;
+            height: auto;
+        }
+        h1, p {
+            margin: 10px auto;
+        }
+        .icons {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            z-index: -1;
+        }
+        .icons img {
+            width: 50px;
+            height: auto;
+            position: absolute;
+        }
+        .icon-1 { top: 10%; left: 10%; }
+        .icon-2 { top: 20%; right: 15%; }
+        .icon-3 { bottom: 20%; left: 15%; }
+        .icon-4 { bottom: 10%; right: 10%; }
+        .icon-5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 14px;
+        }
+/*------------------------------------------------------------------------------*/
+/* General Styling */
+article {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay Effect */
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: -1; /* Push it behind the content */
+}
+
+/* Title Styling for .judul-berita h2 */
+.judul-berita h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #ffffff; /* White */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 4em; /* Set size equal to h1 */
+}
+
+
+/* Article Grid */
+.artikel {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    height: 500px;
+    justify-content: center; /* Center align items */
+    align-items: flex-start; /* Align items to the top */
+    gap: 1.5rem; /* Add space between items */
+    margin-top: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap; /* Wrap items if they overflow */
+}
+
+/* Card Styling */
+.artikel div {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: 250px; /* Set a consistent width for each card */
+    text-align: center;
+}
+
+.artikel div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+/* Image Styling */
+.artikel img {
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    width: 100%; /* Make the image fit the card */
+    height: auto; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.artikel div:hover img {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Text Styling */
+.teks p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    color:rgb(0, 0, 0); /* Dark gray */
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .artikel {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .judul-berita h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .artikel {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .judul-berita h2 {
+        font-size: 1.5rem;
+    }
+}
+
 
 </style>
 
@@ -157,16 +307,16 @@
         <div id="main-slider" class="flexslider">
             <ul class="slides" style="margin-right:30px;">
               <li>
-                <img src="<?= base_url() ?>template/front-end/img/slides/1.png" alt="" />
+                <img src="<?= base_url() ?>template/front-end/img/slides/1o.png" alt="" />
               </li>
               <li>
-                <img src="<?= base_url() ?>template/front-end/img/slides/2.png" alt="" />
+                <img src="<?= base_url() ?>template/front-end/img/slides/2o.png" alt="" />
               </li>
               <li>
-                <img src="<?= base_url() ?>template/front-end/img/slides/3.png" alt="" />
+                <img src="<?= base_url() ?>template/front-end/img/slides/3o.png" alt="" />
               </li>
 			        <li>
-                <img src="<?= base_url() ?>template/front-end/img/slides/4.png" alt="" />
+                <img src="<?= base_url() ?>template/front-end/img/slides/4o.png" alt="" />
               </li>
             </ul>
         </div>
@@ -180,103 +330,77 @@
         <button type="submit">Cari</button>
     </form>
 </div>
-
-<section class="callaction">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12" style="margin-left: 28px;">
-				<div class="aligncenter"><h1 class="aligncenter">Sambutan Kepala Dinas</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span><br>
-					<p class="text-justify">Puji syukur kami ucapkan kepada Allah SWT atas perkenan-Nya Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang  telah mempunyai website resmi yang menampilkan informasi mengenai Pemberdayaan Perempuan dan Perlindungan Anak di Kota Semarang. </p>
-
-					<p class="text-justify">Tidak lupa kami ucapkan selamat datang di Website kami. Website ini merupakan salah satu bentuk upaya konkrit dari kami untuk menyetarakan dengan lembaga-lembaga lain di Indonesia yang telah terlebih dahulu memasuki dunia informasi global.</p> 
-					
-					<p class="text-justify">Selain itu diharapkan bahwa website ini dapat menjadi penyedia informasi bagi semua pihak yang memerlukan informasi seputar Pemberdayaan Perempuan dan Perlindungan Anak di lingkungan Pemerintah Kota Semarang.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<section class="callaction">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12" style="margin-left: 28px;">
-					<div class="aligncenter">
-						<h1 class="aligncenter">Website Resmi DP3A Kota Semarang</h1>
-						<span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>
-						<p class="text-justify"> Website Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang ini merupakan sarana media pelayanan data dan informasi bagi seluruh lapisan masyarakat Kota Semarang yang bertujuan memberikan pelayanan informasi dan data melalui media elektronik.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-<section id="content">
-	<div class="slider-container">
-		<div class="slider-wrapper">
-			<div class="slider-item">
-				<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Kecil/112.png" alt="Slide 1">
-			</div>
-			<div class="slider-item">
-				<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Utama/2024/DSC05409.jpg" alt="Slide 2">
-			</div>
-		</div>
-		<div class="slider-nav">
-			<button class="prev">&#10094;</button>
-			<button class="next">&#10095;</button>
-		</div>
-	</div>
-</section>&nbsp;
-		
-	<section id="pappihebat" class="section" style="background-color:#ffffff;">
-		<div align="center">
-			<div class="section-header aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-				<img src="https://dp3a.semarangkota.go.id/storage/app/media/Gambar%20Slide%20Utama/2024/Logo_Pappi_Hebat-removebg-preview.png" alt="Pappi Hebat" class="img-fluid">
-			</div>&nbsp;
-
-			<section id="pointpappihebat">
-			<div class="container my-5">
-  <div class="row justify-content-center">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <a href="http://ppt-dp3a.semarangkota.go.id" target="_blank" class="feature-card text-center p-4 h-100 d-block">
-            <div class="feature-icon mb-4" style="font-size: 60px;">
-              🎯
-            </div>&nbsp;
-            <h5 class="mb-2">Asikk Pak</h5>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <a href="http://kla.dp3a.semarangkota.go.id/" target="_blank" class="feature-card text-center p-4 h-100 d-block">
-            <div class="feature-icon mb-4" style="font-size: 60px;">
-              👥
-            </div>&nbsp;
-            <h5 class="mb-2">Evaluasi Kota<br>Layak Anak</h5>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <a href="http://siga.dp3a.semarangkota.go.id/" target="_blank" class="feature-card text-center p-4 h-100 d-block">
-            <div class="feature-icon mb-4" style="font-size: 60px;">
-              💾
-            </div>&nbsp;
-            <h5 class="mb-2">Sistem Informasi<br>Gender dan Anak</h5>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <a href="http://dp3a.semarangkota.go.id/pengaduan" target="_blank" class="feature-card text-center p-4 h-100 d-block">
-            <div class="feature-icon mb-4" style="font-size: 60px;">
-              📣
-            </div>&nbsp;
-            <h5 class="mb-2">Pengaduan<br>Masyarakat</h5>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<!---------------------------------------------------------------------------------------------------------->
+<div class="video-container">
+    <iframe 
+        source src="https://damkar.semarangkota.go.id/assets/video/video-damkar-480p.webm" type="video/mp4" label="480p"
+        source src="https://damkar.semarangkota.go.id/assets/video/video-damkar-720p.webm" type="video/mp4" label="720p"
+        title="YouTube video player" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
 </div>
+<section class="callaction">
+  <div class="container">
+          <!-- Ikon Background -->
+          <div class="icons">
+              <img src="fire-icon-1.png" alt="Icon Api" class="icon-1">
+              <img src="fire-extinguisher.png" alt="Pemadam" class="icon-2">
+              <img src="forest-fire.png" alt="Kebakaran Hutan" class="icon-3">
+              <img src="fireman-icon.png" alt="Pemadam Kebakaran" class="icon-4">
+              <img src="fire-warning.png" alt="Peringatan Api" class="icon-5">
+          </div>
+          <!-- Logo Utama -->
+          <img src="https://damkar.semarangkota.go.id/assets/images/logo-damkar-jumbotron.png" alt="Logo Damkar">
+          
+          <!-- Deskripsi Teks -->
+          <h2 class="aligncenter">DINAS PEMADAM KEBAKARAN KOTA SEMARANG</h2>
+          <h1>YUDHA BRAMA JAYA</h1>
+          <p>Dinas Pemadam Kebakaran adalah sebuah lembaga atau instansi yang bertanggung jawab dalam penanggulangan kebakaran
+              dan penyelamatan jiwa serta harta benda yang terancam oleh kebakaran. Tujuan dari Dinas Pemadam Kebakaran
+              adalah untuk melindungi masyarakat, properti, dan lingkungan dari risiko kebakaran.</p>
+  </div>	
 </section>
+<!---------------------------------------------------------------------------------------------------------->
+<article class="w-screen md:h-screen py-5 flex justify-center flex-wrap px-5" style="background-image: url('https://damkar.semarangkota.go.id/assets/images/dinas-terkait.png');">
+    <div class="judul-berita h-1/12 mt-16">
+        <h2 class="text-black text-3xl">Dinas Terkait</h2>
+    </div>
+    <div class="artikel bg-cover w-full bg-no-repeat bg-left-top bg-opacity-10 md:flex md:items-start md:justify-evenly grid grid-cols-3 gap-2 uppercase md:gap-5 md:flex-wrap mx-auto items-center">
+        <div class="flex flex-1 flex-col justify-center items-center gap-2">
+            <img class="md:h-44 h-24" src="https://damkar.semarangkota.go.id/assets/images/profil/dinas-terkait/mendagri.png" alt="Kementrian Dalam Negeri">
+            <div class="teks text-center md:text-base font-bold text-xs">
+                <p>Kementrian Dalam Negeri Republik Indonesia</p>
+            </div>
+        </div>
+        <div class="flex flex-1 flex-col justify-center items-center gap-2">
+            <img class="md:h-44 h-24" src="https://damkar.semarangkota.go.id/assets/images/profil/dinas-terkait/pemkot.png" alt="Kementrian Dalam Negeri">
+            <div class="teks text-center md:text-base font-bold text-xs">
+                <p>Pemerintah Kota Semarang</p>
+            </div>
+        </div>
+        <div class="flex flex-1 flex-col justify-center items-center gap-2">
+            <img class="md:h-44 h-24" src="https://damkar.semarangkota.go.id/assets/images/profil/dinas-terkait/bpbd-indonesia.png" alt="Kementrian Dalam Negeri">
+            <div class="teks text-center md:text-base font-bold text-xs">
+                <p>Badan Penanggulangan Bencana Daerah Provinsi Jawa Tengah</p>
+            </div>
+        </div>
+        <div class="flex flex-1 flex-col justify-center items-center gap-2">
+            <img class="md:h-44 h-24" src="https://damkar.semarangkota.go.id/assets/images/profil/dinas-terkait/bpbd-kota.png" alt="Kementrian Dalam Negeri">
+            <div class="teks text-center md:text-base font-bold text-xs">
+                <p>Badan Penanggulangan Bencana Daerah Kota Semarang</p>
+            </div>
+        </div>
+        <div class="flex flex-1 flex-col justify-center items-center gap-2">
+            <img class="md:h-44 h-24" src="https://damkar.semarangkota.go.id/assets/images/profil/dinas-terkait/dinkes.png" alt="Kementrian Dalam Negeri">
+            <div class="teks text-center md:text-base font-bold text-xs">
+                <p>Dinas Kesehatan Kota Semarang</p>
+            </div>
+        </div>
+    </div>
+</article>
+<!---------------------------------------------------------------------------------------------------------->
 
 <section class="courses">
     <div class="container">

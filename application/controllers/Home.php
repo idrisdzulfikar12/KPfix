@@ -48,7 +48,7 @@ class Home extends CI_Controller {
     public function sambutan()
     {
         $data = array(
-                    'title' => 'Sambutan Kepala Dinas',
+                    'title' => 'Visi Misi',
                     'isi' => 'v_sambutan'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
@@ -134,6 +134,15 @@ class Home extends CI_Controller {
                     'isi' => 'v_sop'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);   
+    }
+
+    public function jadwal_kunjungan()
+    {
+        $data = array(
+            'title' => 'Jadwal Kunjungan',
+            'isi' => 'v_jadwal_kunjungan'
+        );
+        $this->load->view('layout/v_wrapper',$data, FALSE);
     }
 
     public function berita()

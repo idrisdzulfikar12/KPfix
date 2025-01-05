@@ -10,6 +10,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="<?= base_url() ?>template/front-end/img/logo.jpg" alt="logo"/></a>
+                    <a class="navbar-brand" href="index.html"><img src="<?= base_url() ?>template/front-end/img/logo-damkar.png" width="400px"alt="logo"/></a>
                 </div>
+            
                 

@@ -1,4 +1,4 @@
-<title>Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender</title>
+<title>Tugas Dan Fungsi</title>
     <style>
         /* Fade-in animation styles */
         .fade-in {
@@ -30,16 +30,18 @@
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <section id="inner-headline">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="pageTitle text-center fade-in" id="headline">Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender</h2>
+                    <h2 class="pageTitle fade-in" id="headline">Tugas Dan Fungsi</h2>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Content Section -->
     <section id="content">
         <div class="container">
             <div class="row"> 
@@ -47,22 +49,15 @@
                     <!-- Card Container -->
                     <div class="card fade-in card-custom" id="fadeCard" style="width: 100%;">
                         <div class="card-body">
-                            <p>Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender mempunyai fungsi:</p>
+                            <p><h1>Tugas Dan Fungsi Utama :</h1></p>
                             <ol>
-                                <li>Perencanaan program, kegiatan dan anggaran;</li>
-                                <li>Pendistribusian tugas kepada bawahan;</li>
-                                <li>Pemberian petunjuk kepada bawahan;</li>
-                                <li>Penyeliaan tugas bawahan dalam lingkup tanggung jawabnya;</li>
-                                <li>Pelaksanaan kegiatan penyusunan Sasaran Kinerja Pegawai;</li>
-                                <li>Pelaksanaan koordinasi dengan perangkat daerah lainnya dan instansi terkait; </li>
-                                <li>Pelaksanaan kegiatan penyusunan kebijakan di Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender; </li>
-                                <li>Pelaksanaan kegiatan Seksi Pengarusutamaan Gender, Seksi Peningkatan Kualitas Keluarga dan Seksi Penguatan Peningkatan Kualitas Hidup Perempuan Perempuan;</li>
-                                <li>Pelaksanaan kegiatan penyusunan data dan informasi di Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender;</li>
-                                <li>Pelaksanaan kegiatan pengelolaan dan pertanggungjawaban keuangan di Bidang Pemberdayaan Perempuan dan Pengarusutamaan Gender; </li>
-                                <li>Pelaksanaan penilaian kinerja Pegawai dalam lingkup tanggungjawabnya;</li>
-                                <li>Pelaksanaan monitoring dan evaluasi program dan kegiatan; </li>
-                                <li>Pelaksanaan penyusunan laporan program dan kegiatan; dan</li>
-                                <li>Pelaksanaan tugas kedinasan lain yang diberikan oleh pimpinan sesuai tugas dan fungsinya.</li>
+                                <h5><li><b>Pemadaman Kebakaran :</b> Memadamkan kebakaran dan melindungi jiwa serta harta benda;</li></h5>
+                                <h5><li><b>Penyelamatan :</b> Menangani kecelakaan, bencana, dan situasi darurat lainnya;</li></h5>
+                                <h5><li><b>Pencegahan Kebakaran :</b> Edukasi masyarakat, inspeksi bangunan, dan simulasi kebakaran;</li></h5>  
+                                <h5><li><b>Penanganan Material Berbahaya :</b> Mengelola bahan berbahaya yang berisiko;</li></h5>
+                                <h5><li><b>Kolaborasi :</b> Bekerja sama dengan instansi lain dalam penanggulangan kebakaran dan bencana;</li></h5>  
+                                <h5><li><b>Pengelolaan Sumber Daya :</b> Memelihara peralatan dan meningkatkan kapasitas personel;</li></h5>
+                                <h5><li><b>Fokus utama:</b> pencegahan, pemadaman, penyelamatan, dan respons darurat;</li></h5>
                             </ol>
                         </div>
                     </div>

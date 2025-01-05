@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Dinas Pemberdayaan Perempuan dan Perlindungan Anak</title>
+<title>Dinas Pemadam Kebakaran Kota Semarang</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />

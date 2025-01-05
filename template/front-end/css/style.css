@@ -93,7 +93,7 @@ header .navbar-collapse  ul.navbar-nav {
 }
 
 header .navbar-default{
-    background-color: #FFFFFF;
+    background-color: #ff0000;
 }
 
 header .nav li a:hover,
@@ -124,8 +124,8 @@ header .navbar-default .navbar-nav > .open > a:focus {
 
 
 header .navbar {
-    min-height: 70px; 
-	padding:18px 0;
+    min-height: 70px;
+    padding: 1px 0;
 }
 
 header .navbar-nav > li  {
@@ -1469,7 +1469,7 @@ article img.pull-right, article .align-right{
 	float:right;
 	margin:5px 0 15px 15px;
 }
- ============================= */
+ /*============================= */
 
 .clear-marginbot{
 	margin-bottom:0;

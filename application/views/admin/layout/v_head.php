@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title><?= $title ?> Dinas Pemberdayaan Perempuan dan Perlindungan Anak</title>
+        <title><?= $title ?> Dinas Pemadam Kebakaran</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="<?= base_url() ?>template/back-end/css/bootstrap.min.css" rel="stylesheet">

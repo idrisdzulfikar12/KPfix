@@ -1,4 +1,4 @@
-<title>Sambutan Kepala Dinas</title>
+<title>Visi Misi</title>
     <style>
         /* Keyframes for fade-in effect */
         @keyframes fadeIn {
@@ -18,6 +18,46 @@
             animation: fadeIn 1s ease-in-out forwards; /* Animation properties */
             animation-delay: 0.3s; /* Optional delay */
         }
+
+        /* Additional styling for layout */
+        .text-justify {
+            text-align: justify;
+        }
+
+        /* Custom Card Styles */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            transition: all 0.3s ease-in-out; /* Smooth transition for warp effect */
+        }
+
+        .card {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); /* Lighter and brighter gradient */
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 500px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adding responsiveness and flex-wrap enhancements */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -25,7 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="pageTitle fade-in">Sambutan Kepala Dinas</h2>
+                    <h2 class="pageTitle fade-in">Visi Dan Misi</h2>
                 </div>
             </div>
         </div>
@@ -33,41 +73,32 @@
 
     <section>
         <div class="container py-5">
-            <div class="about">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12" style="margin-left: 25px;">
-                        <!-- Card with fade-in animation -->
-                        <div class="card border-0 shadow-lg fade-in">
-                            <div class="row g-0 align-items-center" 
-                                 style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-radius: 10px;">
-                                <!-- Image Section -->
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <img src="<?= base_url() ?>template/front-end/img/kepala.png" 
-                                         alt="Kepala Dinas" 
-                                         class="img-fluid rounded-start"
-                                         style="max-width: 100%; height: auto; object-fit: cover; padding: 20px;">
-                                </div>
-                                <!-- Content Section -->
-                                <div class="col-md-8">
-                                    <div class="card-body p-5"><br><br>
-                                        <p class="card-text text-justify" 
-                                           style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
-                                            Puji syukur kami ucapkan kepada Allah SWT atas perkenan-Nya Dinas Pemberdayaan Perempuan dan Perlindungan Anak Kota Semarang telah mempunyai website resmi yang menampilkan informasi mengenai Pemberdayaan Perempuan dan Perlindungan Anak di Kota Semarang.
-                                        </p>
-                                        <p class="card-text text-justify" 
-                                           style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
-                                            Tidak lupa kami ucapkan selamat datang di Website kami. Website ini merupakan salah satu bentuk upaya konkrit dari kami untuk menyetarakan dengan lembaga-lembaga lain di Indonesia yang telah terlebih dahulu memasuki dunia informasi global.
-                                        </p>
-                                        <p class="card-text text-justify" 
-                                           style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
-                                            Selain itu diharapkan bahwa website ini dapat menjadi penyedia informasi bagi semua pihak yang memerlukan informasi seputar Pemberdayaan Perempuan dan Perlindungan Anak di lingkungan Pemerintah Kota Semarang.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Card -->
-                    </div>
+            <div class="card-container fade-in">
+                <div class="card">
+                    <h3><u>Visi</u></h3>
+                    <p class="card-text text-justify" 
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        Terciptanya Rasa Aman Masyarakat Kota Semarang Dari Bahaya Kebakaran.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><u>Misi</u></h3>
+                    <p class="card-text text-justify" 
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        1. Meningkatkan profesionalisme aparatur Dinas Pemadam Kebakaran yang berdedikasi tinggi, peduli serta antisipasif.
+                    </p>
+                    <p class="card-text text-justify" 
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        2. Memberikan pelayanan prima dalam bidang pencegahan, penanggulangan Kebakaran serta penyelamatannya.
+                    </p>
+                    <p class="card-text text-justify" 
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        3. Meningkatkan ketahanan lingkungan di bidang pencegahan dan penanggulangan kebakaran kepada masyarakat.
+                    </p>
+                    <p class="card-text text-justify" 
+                       style="color: #333; font-size: 1.5rem; line-height: 2; font-weight: 500;">
+                        4. Meningkatkan kerjasama dengan instansi terkait.
+                    </p>
                 </div>
             </div>
         </div>
@@ -88,3 +119,4 @@
             }
         });
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

@@ -5,7 +5,7 @@ class Admin extends CI_Controller {
     {
         $data = array(
                     'title' => 'Dashboard',
-                    'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
+                    'title2' => 'Dinas Pemadam Kebakaran',
                     'isi' => 'admin/v_home'
         );
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
