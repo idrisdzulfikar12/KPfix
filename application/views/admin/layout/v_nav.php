@@ -13,39 +13,27 @@
                                     </span>
                                 </div>
                                 <!-- /input-group -->
-                            </li>
-                            <li>
-                                <a href="<?= base_url('admin')?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Layanan Publik<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="<?= base_url('form_pengaduan')?>">Form Pengaduan</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= base_url('jadwal_kunjungan')?>">Jadwal Kunjungan</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-edit fa-fw"></i> Publikasi<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="<?= base_url('berita')?>">Berita</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="<?= base_url('kontak')?>"><i class="fa fa-phone fa-fw"></i> Kontak</a>
-                            </li>
-                            <li class="active">
-                                <a href="<?= base_url('login/logout') ?>"><i class="fa fa-sign-out"></i> Logout</a>
-                                <!-- /.nav-second-level -->
-                            </li>
+                                <li>
+                <a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="<?= base_url('Admin/pengaduan') ?>"><i class="fa fa-bar-chart-o fa-fw"></i> Form Pengaduan</a>
+            </li>
+            <li>
+                <a href="<?= base_url('Admin/jadwal_kunjungan') ?>"><i class="fa fa-calendar fa-fw"></i> Jadwal Kunjungan</a>
+            </li>
+            <li>
+                <a href="<?= base_url('berita') ?>"><i class="fa fa-edit fa-fw"></i> Berita</a>
+            </li>
+            <li>
+                <a href="<?= base_url('kontak') ?>"><i class="fa fa-phone fa-fw"></i> Kontak</a>
+            </li>
                         </ul>
+                        <div class="logout-section">
+            <a href="<?= base_url('login/logout') ?>" class="btn btn-danger btn-block">
+                <i class="fa fa-sign-out"></i> Logout
+            </a>
+        </div>
                     </div>
                     <!-- /.sidebar-collapse -->
                 </div>

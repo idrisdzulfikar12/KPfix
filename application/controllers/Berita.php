@@ -12,7 +12,7 @@ class Berita extends CI_Controller {
     {
         $data = array(
             'title' => 'Berita',
-            'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
+            'title2' => 'Dinas Pemadam Kebakaran',
             'berita' => $this->m_berita->lists(),
             'isi' => 'admin/berita/v_lists'
         );

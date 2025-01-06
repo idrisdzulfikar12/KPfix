@@ -12,7 +12,7 @@ class Kontak extends CI_Controller {
     {
         $data = array(
             'title' => 'Kontak',
-            'title2' => 'Dinas Pemberdayaan Perempuan dan Perlindungan Anak',
+            'title2' => 'Dinas Pemadam Kebakaran',
             'kontak' => $this->m_kontak->lists(),
             'isi' => 'admin/kontak/v_lists'
         );

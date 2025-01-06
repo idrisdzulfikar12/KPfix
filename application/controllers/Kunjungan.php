@@ -9,7 +9,7 @@ class Kunjungan extends CI_Controller {
 
     public function submit()
 {
-    $config['upload_path'] = 'uploads/';
+    $config['upload_path'] = 'uploads/pdf/';
     $config['allowed_types'] = 'pdf';
     $config['max_size'] = 1024; // 1MB
     $config['file_name'] = 'file_permohonan_' . time();
